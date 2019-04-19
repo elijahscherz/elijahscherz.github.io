@@ -1,0 +1,93 @@
+.splash {
+  height: 100vh;
+  min-height: 500px;
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.3) 0,
+      rgba(22, 22, 22, 0.7) 85%,
+      #161616 100%
+    ),
+    url("../images/trianglify.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+
+#splashText {
+  animation-duration: 4s, 2s;
+  -webkit-animation-name: fadein, slidein; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation-name: fadein, slidein; /* Firefox < 16 */
+  -ms-animation-name: fadein, slidein; /* Internet Explorer */
+  -o-animation-name: fadein, slidein; /* Opera < 12.1 */
+  animation-name: fadein, slidein;
+}
+
+/* ANIMATIONS */
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* FADES */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

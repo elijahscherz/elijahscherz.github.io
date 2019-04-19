@@ -1,172 +1,296 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Elijah Scherz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="landing">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Elijah Scherz</title>
+    <meta charset="utf-8" />
+    <!--For mobile support-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Dafont css file-->
+    <link rel="stylesheet" href="css/all.css" />
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Elijah Scherz</a></h1>
-						<!--<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>-->
-					</header>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Personal js file-->
+    <script src="js/main.js"></script>
+    <!-- Dafont js file-->
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">Elijah Scherz</a>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Elijah Scherz</h2>
-							<p>It's the 21st century.<br />
-							Everybody needs a site.<!--<br />-->
-							<!--crafted by <a href="http://html5up.net">HTML5 UP</a>.--></p>
-							<ul class="actions">
-								<li><a href="#two" class="button special">Want more?</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Continue</a>
-					</section>
+      <!-- Navbar toggle button-->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>When I was younger, I used to say<br />
-								that I was a bit of a hobbyist.</h2>
-								<p>Here are a couple cool things about me, and links to further information if possible.</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-code major style1"><span class="label">Development</span></span></li>
-								<li><span class="icon fa-circle-o major style2"><span class="label">Ultimate</span></span></li>
-								<li><span class="icon fa-music major style3"><span class="label">Music</span></span></li>
-							</ul>
-						</div>
-					</section>
+      <!-- Navbar menu items -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >HOME
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--/.Navbar-->
 
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Code Development</h2>
-								<p>I've been programming for a couple years now and have bounced between languages involved with web development to bash scripting. I've been loving C#, specifically as it applies to game creation in <a href="https://unity3d.com/">Unity</a>. Most recently, I've been working with C++ to learn more about the techniques of object oriented programming.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Ultimate Frisbee</h2>
-								<p>It's 2018 and this is my sixth year playing friz. Over the last couple years I've competed in multiple tournaments including the U.S. Open in Minnesota as well as Club Regional Championships. I love the sport, I love the people.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Music</h2>
-								<p>From a young age, I grew up in a musical household. My parents both play various instruments as well as sing, and those skills have passed down to me. I play guitar and sing, and can carry a beat on drums and play simple chord songs on piano. Can't seem to forget how much of a wonder music is, and that is likely what brings me to listen to so many tunes. I've got pretty wide tastes, from alternative, to classic rock, to punk pop. Take a look at my <a href="https://open.spotify.com/user/elijahscherz">Spotify</a> to find some new bands and some great playlists.</p>
-							</div>
-						</section>
-					</section>
+    <!-- Splash -->
+    <header class="splash">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div id="splashText" class="col-12 text-center">
+            <h1 class="display-3 font-weight-light">
+              Developer. Musician. Player.
+            </h1>
+            <h3 class="font-weight-light">
+              It's the 21st century. Everybody needs a site.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /.Splash-->
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>BUT... did you know...?</h2>
-								<p>Here are a couple more things about me. I've done some cool stuff and I've lived a pretty decent life so far.<br />
-								However, there are always more things to be done. Maybe I should take up hip hop dancing..</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane-o">
-									<h3>Currently Attending The University of Michigan, Ann Arbor</h3>
-									<p>It's a great place, honestly.</p>
-								</li>
-								<li class="icon fa-music">
-									<h3>Worship Leader</h3>
-									<p>Using my skills and superpowers of music to play guitar and occasionally sing at <a href="https://www.facebook.com/Chelsea-Church-of-The-Nazarene-158323664189170/">Chelsea Church of the Nazarene</a>.</p>
-								</li>
-								<li class="icon fa-book">
-									<h3>Sunday School Teacher</h3>
-									<p>Also at Chelsea, I take great pride in showing the little ones how amazing God's love can really be. Jealous?</p>
-								</li>
-								<li class="icon fa-laptop">
-									<h3>Blender</h3>
-									<p>This <a href="https://www.blender.org/">3D modeling software</a> has to be one of the most fantastic things I've ever played with. With the resources online, I guarantee you can shock yourself at the realism you can make.</p>
-								</li>
-								<li class="icon fa-video-camera">
-									<h3>Raspberry Pi</h3>
-									<p>I've started working with these little devices, and they can be applied in some of the most interesting ways. Recently, I made a system that combines arcade, SNES, NES, SEGA, and even more. It started as a small project inspired by wanting to let my dad play the games he used to play, but grew into a system with thousands of games, multiple controllers, and hopefully a portable version in the near future.</p>
-								</li>
-								<li class="icon fa-film">
-									<h3>Movies and TV</h3>
-									<p>I'm a huge movie and TV fan. I've fancied myself a bit of a critic when it comes to these things, and I very much enjoy analyzing films and pulling them apart to see what either makes them good or garbage. Wonder Woman? Good. Stranger Things? Good. Suicide Squad? Not so good.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+    <!-- Page Content -->
+    <section class="py-5">
+      <div class="container text-center">
+        <h2 class="font-weight-light">
+          When I was younger, I used to say<br />
+          that I was a bit of a hobbyist.
+        </h2>
+        <p>
+          Here are a couple cool things about me, and links to further
+          information if possible.
+        </p>
+      </div>
+    </section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Well, that's it!</h2>
-								<p>Still not satisfied? I mean, I guess you can feel free to poke around here some more. Maybe there are hidden pearls of knowledge waiting to be unearthed... personally I doubt that, but I admire your tenacity.</p>
-							</header>
-							<ul class="actions vertical">
-								<li><a href="#" class="button fit special">Back to Top</a></li>
-								<li><a href="#three" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section>
+    <div class="container">
+      <!-- One -->
+      <section id="one" class=" text-center">
+        <div class="inner">
+          <header>
+            <h2></h2>
+            <p></p>
+          </header>
+          <section class="row">
+            <div class="col-md-4">
+              <i class="fab fa-github"></i
+              ><span class="label">Development</span>
+            </div>
+            <div class="col-md-4">
+              <i class="fab fa-github"></i><span class="label">Ultimate</span>
+            </div>
+            <div class="col-md-4">
+              <i class="fab fa-github"></i><span class="label">Music</span>
+            </div>
+          </section>
+        </div>
+      </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Elijah Scherz</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+      <!-- Two -->
+      <section id="two" class="">
+        <section class="spotlight row">
+          <div class="image col-md-4">
+            <img src="images/pic01.jpg" class="img-fluid" />
+          </div>
+          <div class="content col-md-8">
+            <h2>Code Development</h2>
+            <p>
+              I've been programming for a couple years now and have bounced
+              between languages involved with web development to bash scripting.
+              I've been loving C#, specifically as it applies to game creation
+              in <a href="https://unity3d.com/">Unity</a>. Most recently, I've
+              been working with C++ to learn more about the techniques of object
+              oriented programming.
+            </p>
+          </div>
+        </section>
+        <section class="spotlight row">
+          <div class="content col-md-8">
+            <h2>Ultimate Frisbee</h2>
+            <p>
+              It's 2018 and this is my sixth year playing friz. Over the last
+              couple years I've competed in multiple tournaments including the
+              U.S. Open in Minnesota as well as Club Regional Championships. I
+              love the sport, I love the people.
+            </p>
+          </div>
+          <div class="image col-md-4">
+            <img src="images/pic02.jpg" class="img-fluid" />
+          </div>
+        </section>
+        <section class="spotlight row">
+          <div class="image col-md-4">
+            <img src="images/pic03.jpg" class="img-fluid" />
+          </div>
+          <div class="content col-md-8">
+            <h2>Music</h2>
+            <p>
+              From a young age, I grew up in a musical household. My parents
+              both play various instruments as well as sing, and those skills
+              have passed down to me. I play guitar and sing, and can carry a
+              beat on drums and play simple chord songs on piano. Can't seem to
+              forget how much of a wonder music is, and that is likely what
+              brings me to listen to so many tunes. I've got pretty wide tastes,
+              from alternative, to classic rock, to punk pop. Take a look at my
+              <a href="https://open.spotify.com/user/elijahscherz">Spotify</a>
+              to find some new bands and some great playlists.
+            </p>
+          </div>
+        </section>
+      </section>
 
-			</div>
+      <!-- Three -->
+      <section id="three" class="text-center">
+        <div class="inner">
+          <header class="major">
+            <h2>BUT... did you know...?</h2>
+            <p>
+              Here are a couple more things about me. I've done some cool stuff
+              and I've lived a pretty decent life so far.<br />
+              However, there are always more things to be done. Maybe I should
+              take up hip hop dancing..
+            </p>
+          </header>
+          <ul class="features">
+            <li class="icon fa-paper-plane-o">
+              <h3>Currently Attending The University of Michigan, Ann Arbor</h3>
+              <p>It's a great place, honestly.</p>
+            </li>
+            <li class="icon fa-music">
+              <h3>Worship Leader</h3>
+              <p>
+                Using my skills and superpowers of music to play guitar and
+                occasionally sing at
+                <a
+                  href="https://www.facebook.com/Chelsea-Church-of-The-Nazarene-158323664189170/"
+                  >Chelsea Church of the Nazarene</a
+                >.
+              </p>
+            </li>
+            <li class="icon fa-book">
+              <h3>Sunday School Teacher</h3>
+              <p>
+                Also at Chelsea, I take great pride in showing the little ones
+                how amazing God's love can really be. Jealous?
+              </p>
+            </li>
+            <li class="icon fa-laptop">
+              <h3>Blender</h3>
+              <p>
+                This
+                <a href="https://www.blender.org/">3D modeling software</a> has
+                to be one of the most fantastic things I've ever played with.
+                With the resources online, I guarantee you can shock yourself at
+                the realism you can make.
+              </p>
+            </li>
+            <li class="icon fa-video-camera">
+              <h3>Raspberry Pi</h3>
+              <p>
+                I've started working with these little devices, and they can be
+                applied in some of the most interesting ways. Recently, I made a
+                system that combines arcade, SNES, NES, SEGA, and even more. It
+                started as a small project inspired by wanting to let my dad
+                play the games he used to play, but grew into a system with
+                thousands of games, multiple controllers, and hopefully a
+                portable version in the near future.
+              </p>
+            </li>
+            <li class="icon fa-film">
+              <h3>Movies and TV</h3>
+              <p>
+                I'm a huge movie and TV fan. I've fancied myself a bit of a
+                critic when it comes to these things, and I very much enjoy
+                analyzing films and pulling them apart to see what either makes
+                them good or garbage. Wonder Woman? Good. Stranger Things? Good.
+                Suicide Squad? Not so good.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      >
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+      <!-- CTA -->
+      <section id="cta" class="wrapper style4">
+        <div class="inner">
+          <header>
+            <h2>Well, that's it!</h2>
+            <p>
+              Still not satisfied? I mean, I guess you can feel free to poke
+              around here some more. Maybe there are hidden pearls of knowledge
+              waiting to be unearthed... personally I doubt that, but I admire
+              your tenacity.
+            </p>
+          </header>
+          <ul class="actions vertical">
+            <li><a href="#" class="button fit special">Back to Top</a></li>
+            <li><a href="#three" class="button fit">Learn More</a></li>
+          </ul>
+        </div>
+      </section>
+      <i class="fab fa-github"></i>
+    </div>
 
-	</body>
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li>
+          <i href="#" class="fab fa-github"></i
+          ><span href="#" class="label">Github</span>
+        </li>
+        <li>
+          <a href="#" class="icon fa-facebook"
+            ><span class="label">Facebook</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon fa-instagram"
+            ><span class="label">Instagram</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon fa-dribbble"
+            ><span class="label">Dribbble</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="icon fa-envelope-o"
+            ><span class="label">Email</span></a
+          >
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Elijah Scherz</li>
+      </ul>
+    </footer>
+  </body>
 </html>
