@@ -16,6 +16,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  image-rendering: -webkit-optimize-contrast;
+
   color: white;
 }
 
