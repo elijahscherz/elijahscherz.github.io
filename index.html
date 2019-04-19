@@ -13,10 +13,11 @@
 
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- Personal js file-->
-    <script src="js/main.js"></script>
     <!-- Dafont js file-->
     <script src="js/all.js"></script>
+    <script src="js/trianglify.min.js"></script>
+    <!-- Personal js file-->
+    <script src="js/main.js"></script>
   </head>
   <body>
     <!--Navbar-->
@@ -90,21 +91,6 @@
         </p>
       </div>
     </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
-    <script>
-      var pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-      var newCanvas = document.body.appendChild(pattern.canvas());
-      var splash = document.getElementById("mainSplash");
-      var gradientString =
-        "linear-gradient(to bottom,rgba(22, 22, 22, 0.3) 0,rgba(22, 22, 22, 0.7) 85%,#161616 100%), ";
-      splash.style.backgroundImage =
-        gradientString + "url(" + newCanvas.toDataURL("image/png") + ")";
-      document.body.removeChild(newCanvas);
-    </script>
 
     <div class="container">
       <!-- One -->
