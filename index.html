@@ -20,7 +20,7 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
       <!-- Navbar brand -->
       <a class="navbar-brand" href="#">Elijah Scherz</a>
 
@@ -61,7 +61,7 @@
     <!--/.Navbar-->
 
     <!-- Splash -->
-    <header class="splash">
+    <header id="mainSplash" class="splash">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div id="splashText" class="col-12 text-center">
@@ -90,6 +90,21 @@
         </p>
       </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+    <script>
+      var pattern = Trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+      var newCanvas = document.body.appendChild(pattern.canvas());
+      var splash = document.getElementById("mainSplash");
+      var gradientString =
+        "linear-gradient(to bottom,rgba(22, 22, 22, 0.3) 0,rgba(22, 22, 22, 0.7) 85%,#161616 100%), ";
+      splash.style.backgroundImage =
+        gradientString + "url(" + newCanvas.toDataURL("image/png") + ")";
+      document.body.removeChild(newCanvas);
+    </script>
 
     <div class="container">
       <!-- One -->
