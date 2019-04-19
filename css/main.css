@@ -21,6 +21,13 @@
   color: white;
 }
 
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .splash {
+    background-attachment: scroll;
+  }
+}
+
 #splashText {
   animation-duration: 4s, 2s;
   -webkit-animation-name: fadein, slidein; /* Safari, Chrome and Opera > 12.1 */
