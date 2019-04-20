@@ -21,6 +21,31 @@
   color: white;
 }
 
+/* SHOWCASE */
+
+.showcase .showcase-img {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 30rem;
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+/* ICONS */
+
+.icons .icon-item {
+  height: 4rem;
+  font-size: 3.5rem;
+}
+
+.icons .icon-item:hover {
+  font-size: 4rem;
+}
+
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .splash {
