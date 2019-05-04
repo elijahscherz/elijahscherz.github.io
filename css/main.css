@@ -42,6 +42,13 @@
   -o-background-size: cover;
   background-size: cover;
   min-height: 30rem;
+  border-radius: 15px;
+  transition: border-radius 1s ease-in;
+}
+
+.showcase .showcase-img:hover {
+  border-radius: 90px;
+  transition: border-radius .1s ease;
 }
 
 .showcase .showcase-text {
@@ -51,6 +58,14 @@
 .panels .panel {
   background-color: rgb(117, 83, 181);
   border-radius: 15px;
+}
+
+.panels .panel:hover {
+  background-color: rgb(106, 74, 165);
+}
+
+.panels .panel a {
+  color: rgb(191, 172, 224);
 }
 
 #footer {
@@ -84,6 +99,16 @@
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+
+@keyframes bubbleimg {
+  from {
+    border-radius: 0px;
+  }
+
+  to {
+    border-radius: 40px;
   }
 }
 
