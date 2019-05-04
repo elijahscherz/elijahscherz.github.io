@@ -1,3 +1,5 @@
+/* Splash */
+
 .splash {
   height: 100vh;
   min-height: 500px;
@@ -21,6 +23,17 @@
   color: white;
 }
 
+/* ICONS */
+
+.icons .icon-item {
+  height: 5rem;
+  font-size: 3.5rem;
+}
+
+.icons .icon-item:hover {
+  font-size: 4rem;
+}
+
 /* SHOWCASE */
 
 .showcase .showcase-img {
@@ -35,15 +48,13 @@
   padding: 3rem;
 }
 
-/* ICONS */
-
-.icons .icon-item {
-  height: 5rem;
-  font-size: 3.5rem;
+.panels .panel {
+  background-color: rgb(117, 83, 181);
+  border-radius: 15px;
 }
 
-.icons .icon-item:hover {
-  font-size: 4rem;
+#footer {
+  width: 200px;
 }
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
