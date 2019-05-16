@@ -16,28 +16,42 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
-  typeWriter();
+  $("#splashText h1").text("");
+  $("#splashText h3").text("");
+  setTimeout(startTypeWriters, 1000);
 });
 
-function typeWriter() {
+$(window).scroll(function (event) {
+
+  $(".module").each(function (i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("come-in");
+    }
+  });
+
+});
+
+function startTypeWriters() {
   var i = 0;
-  var txt1 = "Developer. Musician. Player."; /* The text */
-  var txt2 = "It's the 21st century. Everybody needs a site.";
-  var speed = 5000; /* The speed/duration of the effect in milliseconds */
-  var text1 = $("#splashText h1");
-  var text2 = $("#splashText h3");
+  var text = "Developer. Musician. Player.";
+  var text2 = "It's the 21st century. Everybody needs a site.";
+  var speed = 80;
 
-  text1.text("");
-  text2.text("");
+  var splashHeader = $("#splashText h1");
+  var splashSubline = $("#splashText h3");
 
-  // for (i = 0; i < txt1.length; ++i) {
-  //   text1.text(text1.text() + txt1.charAt(i));
-  //   setTimeout(typeWriter, speed);
-  // }
+  typeWriter(i, text, speed, splashHeader);
+  setTimeout(typeWriter, 1800, i, text2, speed / 2, splashSubline);
+}
 
-  // for (i = 0; i < txt2.length; ++i) {
-  //   text2.text() += txt2.charAt(i);
-  //   i++;
-  //   setTimeout(typeWriter, speed);
-  // }
+// This might not really work in other browsers / < IE9 for example.
+function typeWriter(i, txt, speed, elem) {
+  //var splashHeader = $("#splashText h1");
+  console.log(i);
+  if (i < txt.length) {
+    elem.text(elem.text() + txt.charAt(i));
+    i++;
+    setTimeout(typeWriter, speed, i, txt, speed, elem);
+  }
 }
