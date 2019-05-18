@@ -2,16 +2,42 @@ html {
   scroll-behavior: smooth;
 }
 
-.come-in {
-  transform: translateY(150px);
-  animation: come-in 1.2s ease forwards;
+/* Dynamic sliding elements */
+
+.come-up {
+  transform: translateY(225px);
+  animation: come-up 1.2s ease forwards;
 }
-.come-in:nth-child(odd) {
+.come-up:nth-child(odd) {
   animation-duration: 1.4s; /* So they look staggered */
 }
 
-@keyframes come-in {
+@keyframes come-up {
   to { transform: translateY(0); }
+}
+
+.come-left {
+  transform: translateX(225px);
+  animation: come-left 1.2s ease forwards;
+}
+.come-left:nth-child(odd) {
+  animation-duration: 1.4s; /* So they look staggered */
+}
+
+@keyframes come-left {
+  to { transform: translateX(0); }
+}
+
+.come-right {
+  transform: translateX(-225px);
+  animation: come-right 1.2s ease forwards;
+}
+.come-right:nth-child(odd) {
+  animation-duration: 1.4s; /* So they look staggered */
+}
+
+@keyframes come-right {
+  to { transform: translateX(0); }
 }
 
 /* Splash */
@@ -58,8 +84,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
   min-height: 30rem;
-  border-radius: 15px;
-  transition: border-radius 1s ease-in;
+  border-radius: 25px;
+  transition: border-radius .5s ease-in;
 }
 
 .showcase .showcase-img:hover {
@@ -95,14 +121,14 @@ html {
   }
 }
 
-#splashText {
+/* #splashText {
   animation-duration: 4s, 2s;
-  -webkit-animation-name: fadein, slidein; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation-name: fadein, slidein; /* Firefox < 16 */
-  -ms-animation-name: fadein, slidein; /* Internet Explorer */
-  -o-animation-name: fadein, slidein; /* Opera < 12.1 */
+  -webkit-animation-name: fadein, slidein;
+  -moz-animation-name: fadein, slidein;
+  -ms-animation-name: fadein, slidein;
+  -o-animation-name: fadein, slidein;
   animation-name: fadein, slidein;
-}
+} */
 
 /* ANIMATIONS */
 

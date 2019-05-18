@@ -23,10 +23,24 @@ $(document).ready(function () {
 
 $(window).scroll(function (event) {
 
-  $(".module").each(function (i, el) {
+  $(".slide-up").each(function (i, el) {
     var el = $(el);
     if (el.visible(true)) {
-      el.addClass("come-in");
+      el.addClass("come-up");
+    }
+  });
+
+  $(".slide-left").each(function (i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("come-left");
+    }
+  });
+
+  $(".slide-right").each(function (i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("come-right");
     }
   });
 
@@ -36,13 +50,13 @@ function startTypeWriters() {
   var i = 0;
   var text = "Developer. Musician. Player.";
   var text2 = "It's the 21st century. Everybody needs a site.";
-  var speed = 80;
+  var speed = 140;
 
   var splashHeader = $("#splashText h1");
   var splashSubline = $("#splashText h3");
 
   typeWriter(i, text, speed, splashHeader);
-  setTimeout(typeWriter, 1800, i, text2, speed / 2, splashSubline);
+  setTimeout(typeWriter, 2500, i, text2, speed / 2, splashSubline);
 }
 
 // This might not really work in other browsers / < IE9 for example.
@@ -52,6 +66,10 @@ function typeWriter(i, txt, speed, elem) {
   if (i < txt.length) {
     elem.text(elem.text() + txt.charAt(i));
     i++;
-    setTimeout(typeWriter, speed, i, txt, speed, elem);
+    setTimeout(typeWriter, getRandomInt(speed - 80, speed), i, txt, speed, elem);
   }
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
