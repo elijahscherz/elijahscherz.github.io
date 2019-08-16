@@ -16,9 +16,9 @@ $(document).ready(function () {
   //   $(this).addClass("active");
   // });
 
-  $("#splashText h1").text("");
-  $("#splashText h3").text("");
-  setTimeout(startTypeWriters, 1000);
+  // $("#splashText h1").val("okay");
+  // $("#splashText h3").val("");
+  // setTimeout(startTypeWriters, 1000);
 });
 
 $(window).scroll(function (event) {
