@@ -1,14 +1,16 @@
-<div class="container-fluid p-5">
-    <h1>Github Gists</h1>
+<div class="bg-charcoal container-fluid p-5">
+    <h1 class="big-title">Github Gists</h1>
     <div class="row">
-      <div class="gist col-12 col-lg-6 p-3" *ngFor="let gist of gists">
-        <a [href]="gist.html_url">
-          <h2 *ngFor="let file of gist.files | keyvalue">
-            {{ file.value.filename }}
-          </h2>
-        </a>
-        <p>{{ gist.description }}</p>
-        <p style="white-space: pre-wrap;">{{ gist.content }}</p>
+      <div class="col-12 col-lg-6 p-3" *ngFor="let gist of gists">
+        <div class="gist hover-div-dip text-center p-3">
+          <a [href]="gist.html_url">
+            <h2 *ngFor="let file of gist.files | keyvalue">
+              {{ file.value.filename }}
+            </h2>
+          </a>
+          <p>{{ gist.description }}</p>
+          <pre class="text-left"><code [highlight]="gist.content"></code></pre>
+        </div>
       </div>
     </div>
 </div>

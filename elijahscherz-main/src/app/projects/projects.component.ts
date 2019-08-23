@@ -11,7 +11,11 @@ export class ProjectsComponent implements OnInit {
   gists: Array<Object> = new Array<Object>();
   repos;
 
-
+  code = `function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello there!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+  }`;
+  
   constructor(private githubService: GithubService) { }
 
   ngOnInit() {
@@ -30,8 +34,8 @@ export class ProjectsComponent implements OnInit {
     let gistsObservable = this.githubService.getGists();
     console.log(gistsObservable);
 
-    gistsObservable.subscribe((gists: Array<Object>) => {
-      gists.forEach((gist: Object) => {
+    gistsObservable.subscribe((gists: any) => {
+      gists.forEach((gist: any) => {
         
         // Loop through the files to get the rawUrl and the code
         for(let key of Object.keys(gist.files)) {
