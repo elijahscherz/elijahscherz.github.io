@@ -1,14 +1,14 @@
 <div class="container-fluid p-5">
     <h1>Github Gists</h1>
     <div class="row">
-      <div class="gist col-12 col-lg-6 p-3" *ngFor="let gist of gists | async">
+      <div class="gist col-12 col-lg-6 p-3" *ngFor="let gist of gists">
         <a [href]="gist.html_url">
           <h2 *ngFor="let file of gist.files | keyvalue">
             {{ file.value.filename }}
           </h2>
         </a>
-        <p>{{this.githubService.getGistCode(gist.url).toString()}}</p>
         <p>{{ gist.description }}</p>
+        <p style="white-space: pre-wrap;">{{ gist.content }}</p>
       </div>
     </div>
 </div>

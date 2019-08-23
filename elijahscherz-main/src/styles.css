@@ -2,3 +2,7 @@
 @import "assets/css/all.css";
 /* Custom CSS */
 @import "assets/css/main.css";
+
+.block-test {
+    white-space: pre-wrap;
+}

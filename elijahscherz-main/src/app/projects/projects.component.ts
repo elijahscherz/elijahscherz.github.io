@@ -8,7 +8,7 @@ import { GithubService } from '../github.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  gists;
+  gists: Array<Object> = new Array<Object>();
   repos;
 
 
@@ -24,13 +24,30 @@ export class ProjectsComponent implements OnInit {
     console.log(this.githubService.getGistCode("https://gist.githubusercontent.com/elijahscherz/dae9e2c68d1877940f04d8f9e2e9f0d0/raw/7e28ff41f035a9a558356b16eb35f641a446e97f/hover_animation"));
 
     this.githubService.getGistCode("https://gist.githubusercontent.com/elijahscherz/dae9e2c68d1877940f04d8f9e2e9f0d0/raw/7e28ff41f035a9a558356b16eb35f641a446e97f/hover_animation").subscribe(value => {
-      // console.log(value);;
-    })
+      console.log(value);
+    });
 
-    // This is an observable... can I make my own? I want to fetch all of the
-    // information at runtime because that makes sense, so let's figure that out.
-    this.gists = this.githubService.getGists();
-    console.log(this.gists);
+    let gistsObservable = this.githubService.getGists();
+    console.log(gistsObservable);
+
+    gistsObservable.subscribe((gists: Array<Object>) => {
+      gists.forEach((gist: Object) => {
+        
+        // Loop through the files to get the rawUrl and the code
+        for(let key of Object.keys(gist.files)) {
+          let rawUrl = gist.files[key].raw_url;
+          let newGistObj = gist;
+          this.githubService.getGistCode(rawUrl).subscribe(value => {
+            console.log(value);
+            newGistObj.content = value;
+            console.log(newGistObj.content);
+            this.gists.push(newGistObj);
+          });
+        }
+      });
+
+      console.log(this.gists);
+    })
 
     this.repos = this.githubService.getRepos();
   }
