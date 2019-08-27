@@ -1,0 +1,24 @@
+
+
+/* Splash */
+
+.splash {
+  height: 100vh;
+  min-height: 500px;
+  background: linear-gradient(to bottom,
+      rgba(22, 22, 22, 0.3) 0,
+      rgba(22, 22, 22, 0.7) 85%,
+      #161616 100%),
+    url("../../assets/images/trianglify.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  image-rendering: -webkit-optimize-contrast;
+
+  color: white;
+}
