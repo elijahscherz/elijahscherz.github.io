@@ -1,7 +1,5 @@
 /* FontAwesome */
 @import "assets/css/all.css";
-/* Custom CSS */
-@import "assets/css/main.css";
 /* Syntax highlighting */
 @import '~highlight.js/styles/github.css';
 
@@ -65,13 +63,11 @@ html {
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    margin-right: 100%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    margin-right: 0%;
   }
 }
 
@@ -158,6 +154,10 @@ body {
 .bg-charcoal {
     background-color: rgb(61, 54, 73);
     color: white;
+}
+
+.bg-charcoal h1 {
+  color: white;
 }
 
 .bg-charcoal a {

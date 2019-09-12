@@ -1,0 +1,27 @@
+/* SHOWCASE */
+
+.showcase .showcase-img {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 30rem;
+  box-shadow: 4px 4px 3px rgba(48, 48, 48, 0.562);
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.panels .panel {
+  background-color: rgb(117, 83, 181);
+  border-radius: 15px;
+}
+
+.panels .panel:hover {
+  background-color: rgb(106, 74, 165);
+}
+
+.panels .panel a {
+  color: rgb(191, 172, 224);
+}

@@ -1,3 +1,9 @@
 #footer {
-    background-color: rgb(33, 37, 41);
+    background-color: #212529;
+    color: rgb(128, 128, 128);
+}
+
+#footer a {
+    display: block;
+    color: rgb(128, 128, 128);
 }
