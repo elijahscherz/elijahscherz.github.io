@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../github.service';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faJira } from '@fortawesome/free-brands-svg-icons';
+import { faBootstrap } from '@fortawesome/free-brands-svg-icons';
+import { faAngular } from '@fortawesome/free-brands-svg-icons';
+import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-projects',
@@ -7,6 +14,14 @@ import { GithubService } from '../github.service';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+
+  faCircle = faCircle;
+  faJira = faJira;
+  faBootstrap = faBootstrap;
+  faAngular = faAngular;
+  faPython = faPython;
+  faNodeJs = faNodeJs;
+  faGithub = faGithub;
 
   gists: Array<Object> = new Array<Object>();
   repos;

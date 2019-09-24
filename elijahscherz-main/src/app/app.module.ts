@@ -26,6 +26,9 @@ import css from 'highlight.js/lib/languages/css';
 import xml from 'highlight.js/lib/languages/xml';
 import bash from 'highlight.js/lib/languages/bash';
 
+// FontAwesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 export function hljsLanguages() {
   return [
     { name: 'typescript', func: typescript },
@@ -56,7 +59,8 @@ export function hljsLanguages() {
     HttpClientModule,
     HighlightModule.forRoot({
       languages: hljsLanguages
-    })
+    }),
+    FontAwesomeModule
   ],
   providers: [
     GithubService
