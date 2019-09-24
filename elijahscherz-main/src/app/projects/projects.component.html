@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col-12 col-lg-6 p-3">
         <div class="gist hover-div-dip p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faCircle"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faJira" transform="shrink-6"></fa-icon>
             </fa-layers>
@@ -16,14 +16,14 @@
       </div>
       <div class="col-12 col-lg-6 p-3">
         <div class="gist hover-div-dip p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faCircle"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faBootstrap" transform="shrink-6"></fa-icon>
             </fa-layers>
           </div>
           <h2 class="text-center">RightBrain Website</h2>
-          <p><a href="https://rightbrainnetworks.com">RBN's website</a> started out based in WordPress with some content already available, but it was in need of a modern update. It was currently hosted on Lightsail, but since that platform takes more administration, I moved it to a new provider, and set up <b>three environments</b> (dev, stage, and prod) for a better development workflow. I used <b>Bootstrap and CSS</b> to update some of the pages that were already available, doing a major overhaul on the home page. Additionally, we split up their single solutions page into a suite of pages and created case studies that are more interactive than the pdfs that were previously available. There are more pages that I designed and created which simply need content from their team, and then they will be launched hopefully in the near future.</p>
+          <p><a href="https://rightbrainnetworks.com">RBN's website</a> started out based in WordPress with some content already available, but it was in need of a modern update. It was previously hosted on <b>AWS Lightsail</b>, but since that platform takes more administration, I moved it to a new provider, and set up <b>three environments</b> (dev, stage, and prod) for a better development workflow. I used <b>Bootstrap and CSS</b> to update some of the pages that were already available, doing a major overhaul on the home page. Additionally, we split up their single solutions page into a suite of pages and created case studies that are more interactive than the pdfs that were previously available. There are more pages that I designed and created which simply need content from their team, and then they will be launched hopefully in the near future.</p>
         </div>
       </div>
       <!-- <div class="col-12 col-lg-6 p-3">
@@ -40,8 +40,8 @@
     <div class="row">
       <div class="col-12 col-lg-6 p-3">
         <div class="gist hover-div-dip p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faCircle"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faPython" transform="shrink-6"></fa-icon>
             </fa-layers>
@@ -52,38 +52,49 @@
       </div>
       <div class="col-12 col-lg-6 p-3">
         <div class="gist hover-div-dip p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faCircle"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faNodeJs" transform="shrink-6"></fa-icon>
             </fa-layers>
           </div>
           <h2 class="text-center">Discord Chat Bot</h2>
-          <p>This small project, which is somewhat of a constant work in progress, is a way to learn a bit more about how to we make bots act in a human-like fashion. I picked up the Discord API and started learning about what it can do when I built the foundation of a bot in <b>Node.js</b>. Right now, it doesn't do much, but it uses VADER sentiment analysis to post reactions to certain messages and reacts to other messages based on keywords. I polled friends and those online to see what types of words they typically react to and in what way, and then set up the bot to randomly react to messages. In the future, I'll make it more complex, but it was just a fun little project.</p>
+          <p>This small project, which is somewhat of a constant work in progress, is a way to learn a bit more about
+            how to we make bots act in a human-like fashion. I picked up the Discord API and started learning about what
+            it can do when I built the foundation of a bot in <b>Node.js</b>. Right now, it doesn't do much, but it uses
+            <b>VADER sentiment analysis</b> to post reactions to certain messages and reacts to other messages based on
+            keywords. I polled friends and those online to see what types of words they typically react to and in what
+            way, and then set up the bot to randomly react to messages.<br><br>I wanted to incorporate more talking
+            ability into the system, but didn't have too much experience with <b>NLP</b> up to this point. I found that
+            <b>Google's Dialogflow had a Node.js SDK</b>, and I got to work hooking up a very basic chat / response
+            system. There is a lot more I can do with it if I take the time to incorporate more responses In the future,
+            using the <b>Intents</b> functionality that Google provides. I also can just let it loose in a couple of
+            servers and <b>use the responses to train</b> it using Google's built in functionality. I'll make it more
+            complex at some point, but it was just a fun little project.</p>
         </div>
       </div>
       <div class="col-12 col-lg-6 p-3">
         <div class="gist hover-div-dip p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faCircle"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faAngular" transform="shrink-6"></fa-icon>
             </fa-layers>
           </div>
-          <h2 class="text-center">This Website</h2>
-          <p>I built this site not too long ago after wanting to change it from my old one. I decided that I wanted to learn <b>Angular and Typescript</b> so took this site as an opportunity. I'm still learning a lot of the concepts, as it is a big framework, but I love the power of it. The Github Gists at the bottom of this page use a service that utilizes <b>Angular's HTTPClient class</b> and the <b>Github API</b> to pull the code and information of all my public gists. Pretty sweet!</p>
+          <h2 class="text-center">My Website</h2>
+          <p>I built this site not too long ago after wanting to change it from my old one. I decided that I wanted to learn <b>Angular and Typescript</b> so took this site as an opportunity. I'm still learning a lot of the concepts, as it is a big framework, but I love the power of it. The Github Gists at the bottom of this page are fetched from a service that utilizes <b>Angular's HTTPClient class</b> and the <b>Github API</b> to pull the code and information of all my public gists. Pretty sweet!<br><br>I make use of <b>CSS for animations</b> and cool transitions, and have been using <b>Font Awesome</b> for icons (as they have a module for Angular now).</p>
         </div>
       </div>
       <div class="col-12 col-lg-6 p-3">
         <div class="gist hover-div-dip p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faCircle"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faNodeJs" transform="shrink-6"></fa-icon>
             </fa-layers>
           </div>
           <h2 class="text-center">Discord Meme Bot</h2>
-          <p>After building one Discord bot, a friend of mine messaged me and wanted me to make something for him: a bot which could <b>join voice chat and play clips</b>. Using the <b>node-opus</b> module, I was able to get the bot to stream clips. Ask requested, I made a method for tagging these clips in the bot, so that you can then search them while in Discord. The bot will direct message you with a list of relevant clips. If you use one of the bots keywords while chatting, it will start playing it's clip for a variety of hilarious outcomes and ridiculous interruptions. We later on extended this functionality to be able to play music!</p>
+          <p>After building one Discord bot, a friend of mine messaged me and wanted me to make something for him: a bot which could <b>join voice chat and play clips</b>. Using the <b>node-opus</b> module, I was able to get the bot to stream clips. Ask requested, I made a method for tagging these clips in the bot, so that you can then search them while in Discord. The bot will direct message you with a list of relevant clips. If you use one of the bots keywords while chatting, it will start playing it's clips for a variety of hilarious outcomes and ridiculous interruptions. We later on extended this functionality to be able to play music!</p>
         </div>
       </div>
     </div>
@@ -94,8 +105,8 @@
     <div class="row">
       <div class="col-12 col-lg-6 p-3" *ngFor="let gist of gists">
         <div class="gist hover-div-dip text-center p-3">
-          <div class="text-center p-3">
-            <fa-layers size="7x" [fixedWidth]="true">
+          <div class="text-center p-4">
+            <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
               <fa-icon [icon]="faGithub"></fa-icon>
               <fa-icon [inverse]="true" [icon]="faJira" transform="shrink-6"></fa-icon>
             </fa-layers>
