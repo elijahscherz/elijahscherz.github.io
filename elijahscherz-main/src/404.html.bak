@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Elijah Scherz</title>
+
+  <script>
+    // Store the URL the user was trying to access when receiving the 404.
+    sessionStorage.redirect = location.href;
+
+  </script>
+
+  <!-- Immediately redirect to the base URL so we can use the SPA routing. -->
+  <meta http-equiv="refresh" content="0;URL='/'">
+  </meta>
+</head>
+
+<body>
+  <div class="bg-charcoal container-fluid p-5">
+
+    <div class="p-3">
+      <h1 class="big-title">Uh oh! I can't seem to find the page you are looking for. If you believe it's my fault,
+        shoot me an email.</h1>
+    </div>
+  </div>
+</body>
+
+
+</body>
+
+</html>
