@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+set -x
+
+rm *.*
+rm -rf assets
+cd elijahscherz-main/
+ng build
+cd ..
+cp -r elijahscherz-main/src/elijahscherz-main/* .
+git add -A
+git commit -m "Pushing build to live prod env from script"
+git push
