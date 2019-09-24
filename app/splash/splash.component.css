@@ -1,0 +1,84 @@
+
+
+/* Splash */
+
+.splash {
+  height: 100vh;
+  min-height: 500px;
+  background: linear-gradient(to bottom,
+      rgba(22, 22, 22, 0.3) 0,
+      rgba(22, 22, 22, 0.7) 85%,
+      #161616 100%),
+    url("../../assets/images/trianglify.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  image-rendering: -webkit-optimize-contrast;
+
+  color: white;
+}
+
+.splash h1 {
+  animation: 2.5s fadein;
+}
+
+@keyframes splash-slide {
+  from {
+    transform: translateX(-400px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.splash img {
+  border-radius: 50%;
+  border: 5px solid white;
+  height: auto;
+  width: 50%;
+  box-shadow: 3px 7px 5px rgba(48, 48, 48, 0.562);
+  animation: 2s splash-slide;
+}
+
+.splash h1.display-3 {
+  font-size: 3.5em;
+}
+
+/* sm */
+@media (min-width: 576px) {
+  .splash img {
+    width: 50%;
+  }
+
+  .splash h1.display-3 {
+    font-size: 3.5em;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .splash img {
+    width: 60%;
+  }
+
+  .splash h1.display-3 {
+    font-size: 4em;
+  }
+}
+
+/* lg */
+@media (min-width: 992px) {
+  .splash img {
+    width: 90%;
+  }
+
+  .splash h1.display-3 {
+    font-size: 5em;
+  }
+}
