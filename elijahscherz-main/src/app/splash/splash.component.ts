@@ -13,8 +13,8 @@ export class SplashComponent implements OnInit {
 
   ngOnInit() {
     var pattern = Trianglify({
-      width: window.innerWidth,
-      height: window.innerHeight
+      width: window.screen.width,
+      height: window.screen.height
     });
     var splash = document.getElementById("mainSplash");
     var gradientString =
