@@ -30,6 +30,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 // Mobile detection
 import { DeviceDetectorModule } from "ngx-device-detector";
+import { ProjectComponent } from './project/project.component';
 
 export function hljsLanguages() {
   return [
@@ -53,7 +54,8 @@ export function hljsLanguages() {
     ProjectsComponent,
     ExperienceComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
