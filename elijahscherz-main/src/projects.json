@@ -1,0 +1,37 @@
+[{
+    "name": "Jira Duplicator",
+    "description": "This particular project was done during my time at RightBrain Networks. It started out as a <b>Python script</b> meant to copy simple issues between client boards and company boards. It evolved into its own <b>custom module and class</b>, which leveraged <b>jira-python</b> to access the <b>Jira REST API</b> and pull information from passed in issues. Using an argument system, the program could do multiple issues at once, do a query based on <b>Jira's JQL syntax</b>, or even sync two issues to match one another. I ended up supporting copying comments, priorities, assignees, and subtasks, all depending on the availability of the source and target issues.<br><br><b>Challenges</b><br>The most difficult part of building this was dealing with the Jira API which would respond with different amounts of information from issues depending on a variety of variables, including who you were logged in as, what type of project you were getting issues from, etc. The solution to this was using checks to see if a field was available on the issue or subtask, and also seeing if required fields were all available on the source issue.",
+    "icon": "faJira",
+    "tags": ""
+  },
+  {
+    "name": "RightBrain Website",
+    "description": "<a href='https://rightbrainnetworks.com'>RBN's website</a> started out based in WordPress with some content already available, but it was in need of a modern update. It was previously hosted on <b>AWS Lightsail</b>, but since that platform takes more administration, I moved it to a new provider, and set up <b>three environments</b> (dev, stage, and prod) for a better development workflow. I used <b>Bootstrap and CSS</b> to update some of the pages that were already available, doing a major overhaul on the home page. Additionally, we split up their single solutions page into a suite of pages and created case studies that are more interactive than the pdfs that were previously available. There are more pages that I designed and created which simply need content from their team, and then they will be launched hopefully in the near future.",
+    "icon": "faBootstrap",
+    "tags": ""
+  },
+  {
+    "name": "A Night to Remember",
+    "description": "I've been working on this one for almost a year and a half at this point. My dad was a huge fan of<b>text-based Infocom games</b> (like Zork) when he was a kid and challenged me to make one. After playing one myself, I got a bit inspired and started working on it in the summer of 2018. I first decided to approach the problem using 'vanilla' <b>Python</b>. I played a few more of the games and determined which parts of the system I wanted to incorporate. There are multiple ways to interact with the world based on commands and keywords. You can also move in different directions and collect items. While my initial system wasn't as complicated as Infocom's, which could support phrases like 'stand on shoulders and leave hole', you could get/check items, interact with certain things like doors with those items, and move.<br><br>At this point, I started to get more interested in where I could go with this. I've always enjoyed reading and wanted to make this into a story. I started writing a <b>murder mystery</b> where you need to explore and discover what happened. I decided I wanted to move this project into <b>C# and Unity</b> which would give me easier access to graphics, sounds, and more. Currently, we are working on completing more art, getting some final endings implemented, and brushing up on the details of the story. It's a work in progress, but a fun one.",
+    "icon": "faPython",
+    "tags": ""
+  },
+  {
+    "name": "Discord Chat Bot",
+    "description": "",
+    "icon": "",
+    "tags": ""
+  },
+  {
+    "name": "My Website",
+    "description": "",
+    "icon": "",
+    "tags": ""
+  },
+  {
+    "name": "Discord Soundboard Bot",
+    "description": "",
+    "icon": "",
+    "tags": ""
+  }
+]
