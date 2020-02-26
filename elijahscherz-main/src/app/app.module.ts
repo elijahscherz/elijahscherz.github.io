@@ -31,6 +31,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 // Mobile detection
 import { DeviceDetectorModule } from "ngx-device-detector";
 import { ProjectComponent } from './project/project.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function hljsLanguages() {
   return [
@@ -65,7 +66,8 @@ export function hljsLanguages() {
       languages: hljsLanguages
     }),
     FontAwesomeModule,
-    DeviceDetectorModule.forRoot()
+    DeviceDetectorModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]
