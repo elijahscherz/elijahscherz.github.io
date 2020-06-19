@@ -1,0 +1,34 @@
+[{
+    "name": "University of Michigan",
+    "location": "Ann Arbor, MI",
+    "info": "Bachelor of Science, Computer Science",
+    "description": "Current GPA: 3.54\n\nRelevant Courses: Data Structures and Algorithms, Foundations of Computer Science, Intro to Computer Organization, Intro to Operating Systems (F ‘19), Web Systems (F’ 19)\n\nRelevant Projects: Web Instagram Clone(React, Flask, Python) | Multithreading Library(C++, Linux)",
+    "date": "MAY 2021"
+  },
+  {
+    "name": "Washtenaw Technical Middle College",
+    "location": "Ann Arbor, MI",
+    "info": "Associate in Applied Science, Occupational Studies (Networking)",
+    "date": "MAY 2021"
+  },
+  {
+    "name": "Capital One Bank",
+    "location": "McLean, VA",
+    "info": "Software Engineering Intern",
+    "date": "JUNE-JULY 2020"
+  },
+  {
+    "name": "RightBrain Networks",
+    "location": "Ann Arbor, MI",
+    "info": "Cloud Development Intern",
+    "description": "Utilized Docker to provision a client’s image in order to build an auto scaling EC2 cluster in AWS ECS for their ticketing system.\n\nWrote Python application which integrated with the Jira API to bulk copy and sync issues across projects and boards.\n\nDesigned Jenkins pipeline to build and deploy the managed services boilerplate to S3.\n\nRe - coded and styled the company website from scratch using HTML, CSS, and jQuery to provide customers with a better experience.\n\nWorked with software and configuration management services such as AWS EC2, AWS CloudFormation, AWS RDS, AWS Lambda, Docker, Jenkins, and Salt to learn the fundamentals of cloud architecture.",
+    "date": "MAY-AUG 2019"
+  },
+  {
+    "name": "Edwards Brothers Malloy",
+    "location": "Ann Arbor, MI",
+    "info": "Web Development Intern",
+    "description": "Succeeded in designing a .NET site template using AngularJS and Bootstrap which could take in formatted JSON to generate internal web sites dynamically.\n\nOrganized and drafted overall structure of both backend and frontend to construct a task - based Agile development plan for the development team.",
+    "date": "MAY 2018"
+  }
+]

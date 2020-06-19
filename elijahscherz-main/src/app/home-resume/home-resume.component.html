@@ -1,0 +1,45 @@
+<!-- Resume Overview -->
+<section id="intro" class="py-5 text-left bg-light container">
+  <div>
+    <h1 class="font-weight-light">
+      Resume Overview
+    </h1>
+    <div class="home-resume-entry">
+      <p class="lead">
+        University of Michigan, Ann Arbor, MI — Bachelor of Science, Computer Science
+      </p>
+      <p>MAY 2021</p>
+    </div>
+    <div class="home-resume-entry">
+      <p class="lead">
+        Washtenaw Technical Middle College, Ann Arbor, MI — Associate in Applied Science, Occupational Studies
+        (Networking)
+      </p>
+      <p>MAY 2017</p>
+    </div>
+    <div class="home-resume-entry">
+      <p class="lead">
+        Capital One Bank - Software Engineering Intern, McLean, VA
+      </p>
+    </div>
+    <div class="home-resume-entry">
+      <p class="lead">
+        Right Brain Networks - Cloud Development Intern, Ann Arbor, MI
+      </p>
+    </div>
+    <div class="home-resume-entry">
+      <p class="lead">
+        Edwards Brothers Malloy - Web Development Intern, Ann Arbor, MI
+      </p>
+    </div>
+  </div>
+
+  <div class="home-resume-entry" *ngFor="let experience of experiences" style="white-space: pre-wrap;">
+    <p class="lead">
+      {{experience.name}}, {{experience.location}} — {{experience.info}}
+    </p>
+    <p>{{experience.date}}</p>
+    <p>{{experience.description}}</p>
+  </div>
+</section>
+<!-- Resume Overview -->

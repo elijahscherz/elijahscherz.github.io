@@ -32,6 +32,12 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { DeviceDetectorModule } from "ngx-device-detector";
 import { ProjectComponent } from './project/project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeIntroComponent } from './home-intro/home-intro.component';
+import { HomeResumeComponent } from './home-resume/home-resume.component';
+import { HomeSkillsComponent } from './home-skills/home-skills.component';
+import { HomeProjectsComponent } from './home-projects/home-projects.component';
+import { HomeInterestsComponent } from './home-interests/home-interests.component';
+import { HomeContactComponent } from './home-contact/home-contact.component';
 
 export function hljsLanguages() {
   return [
@@ -56,7 +62,13 @@ export function hljsLanguages() {
     ExperienceComponent,
     ContactComponent,
     FooterComponent,
-    ProjectComponent
+    ProjectComponent,
+    HomeIntroComponent,
+    HomeResumeComponent,
+    HomeSkillsComponent,
+    HomeProjectsComponent,
+    HomeInterestsComponent,
+    HomeContactComponent
   ],
   imports: [
     BrowserModule,
