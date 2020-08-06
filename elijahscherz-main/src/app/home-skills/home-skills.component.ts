@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import SkillsJson from '../../assets/data/skills.json';
+
 
 @Component({
   selector: 'app-home-skills',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeSkillsComponent implements OnInit {
 
-  constructor() { }
+  skills: Array<Object> = SkillsJson;
+
+  constructor() {
+    // TODO: shuffle skills array?
+  }
 
   ngOnInit() {
   }

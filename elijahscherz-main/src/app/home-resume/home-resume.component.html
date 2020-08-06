@@ -1,45 +1,20 @@
 <!-- Resume Overview -->
 <section id="intro" class="py-5 text-left bg-light container">
-  <div>
-    <h1 class="font-weight-light">
-      Resume Overview
-    </h1>
-    <div class="home-resume-entry">
-      <p class="lead">
-        University of Michigan, Ann Arbor, MI — Bachelor of Science, Computer Science
-      </p>
-      <p>MAY 2021</p>
-    </div>
-    <div class="home-resume-entry">
-      <p class="lead">
-        Washtenaw Technical Middle College, Ann Arbor, MI — Associate in Applied Science, Occupational Studies
-        (Networking)
-      </p>
-      <p>MAY 2017</p>
-    </div>
-    <div class="home-resume-entry">
-      <p class="lead">
-        Capital One Bank - Software Engineering Intern, McLean, VA
-      </p>
-    </div>
-    <div class="home-resume-entry">
-      <p class="lead">
-        Right Brain Networks - Cloud Development Intern, Ann Arbor, MI
-      </p>
-    </div>
-    <div class="home-resume-entry">
-      <p class="lead">
-        Edwards Brothers Malloy - Web Development Intern, Ann Arbor, MI
-      </p>
-    </div>
-  </div>
 
-  <div class="home-resume-entry" *ngFor="let experience of experiences" style="white-space: pre-wrap;">
-    <p class="lead">
-      {{experience.name}}, {{experience.location}} — {{experience.info}}
-    </p>
-    <p>{{experience.date}}</p>
-    <p>{{experience.description}}</p>
+  <h1 class="home-title p-5">RESUME</h1>
+  <hr>
+
+  <div class="home-resume-entry row py-3" *ngFor="let experience of experiences" style="white-space: pre-wrap;">
+    <div class="col-3 text-center">
+      <h3>ICON</h3>
+      <div style="margin: auto; background-color:dimgray; width: 0.5em; height: 15em;"></div>
+    </div>
+    <div class="col-9">
+      <h4>{{experience.name}}, {{experience.location}} — {{experience.info}}
+      </h4>
+      <p>{{experience.date}}</p>
+      <p class="lead">{{experience.description}}</p>
+    </div>
   </div>
 </section>
-<!-- Resume Overview -->
+<!-- /Resume Overview -->

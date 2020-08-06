@@ -1,13 +1,19 @@
 <!-- Skills Summary -->
 <section id="intro" class="py-5 text-left bg-light container">
-  <div>
-    <h2 class="font-weight-light">
-      Skills
-    </h2>
-    <p class="lead">
-      Here are a couple cool things about me, my skills, interests, and links to further
-      information if possible.
-    </p>
+  <h1 class="home-title p-5">SKILLS</h1>
+  <hr>
+
+  <div class="home-skill-entry row py-3" *ngFor="let skill of skills" style="white-space: pre-wrap;">
+    <div class="col-2 text-center">
+      <!-- TODO: Icon on bar when it loads? -->
+      <h3>ICON</h3>
+    </div>
+    <div class="col-10">
+      <h4>{{skill.name}}, {{skill.type}}
+      </h4>
+      <p>{{skill.type}}</p>
+      <p class="lead">{{skill.percentage}}</p>
+    </div>
   </div>
 </section>
 <!-- /Skills Summary -->
