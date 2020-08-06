@@ -139,7 +139,7 @@ html {
 
 
 html {
-    font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 body {
@@ -148,12 +148,12 @@ body {
 }
 
 .big-title {
-    font-size: 4em;
+  font-size: 4em;
 }
 
 .bg-charcoal {
-    background-color: rgb(61, 54, 73);
-    color: white;
+  background-color: rgb(61, 54, 73);
+  color: white;
 }
 
 .bg-charcoal h1 {
@@ -161,11 +161,11 @@ body {
 }
 
 .bg-charcoal a {
-    color: rgb(61, 54, 73);
+  color: rgb(61, 54, 73);
 }
 
 .bg-charcoal a:hover {
-    color: rgb(111, 98, 133);
+  color: rgb(111, 98, 133);
 
 }
 
@@ -189,5 +189,13 @@ body {
   border-style: solid;
   transition: all .2s ease-in-out;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
