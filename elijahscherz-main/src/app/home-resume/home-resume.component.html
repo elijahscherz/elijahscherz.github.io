@@ -5,11 +5,14 @@
   <hr>
 
   <div class="home-resume-entry row py-3" *ngFor="let experience of experiences" style="white-space: pre-wrap;">
-    <div class="col-3 text-center">
-      <h3>ICON</h3>
+    <div class="col-lg-4 col-12 text-center">
+      <span class="icon-item fa-stack fa-4x">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-code fa-stack-1x"></i>
+      </span>
       <div style="margin: auto; background-color:dimgray; width: 0.5em; height: 15em;"></div>
     </div>
-    <div class="col-9">
+    <div class="col-lg-8 col-12">
       <h4>{{experience.name}}, {{experience.location}} — {{experience.info}}
       </h4>
       <p>{{experience.date}}</p>

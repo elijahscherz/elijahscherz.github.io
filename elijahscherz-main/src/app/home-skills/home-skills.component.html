@@ -6,7 +6,11 @@
   <div class="home-skill-entry row py-3" *ngFor="let skill of skills" style="white-space: pre-wrap;">
     <div class="col-2 text-center">
       <!-- TODO: Icon on bar when it loads? -->
-      <h3>ICON</h3>
+      <!-- <h3>ICON</h3> -->
+      <span class="icon-item fa-stack fa-1x">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-code fa-stack-1x"></i>
+      </span>
     </div>
     <div class="col-10">
       <h4>{{skill.name}}, {{skill.type}}
