@@ -7,8 +7,9 @@ div.game {
     max-height: 50vh;
     border-radius: 10%;
     box-shadow: 0 30px 32px 0 rgba(0, 0, 0, 0.295);
-    border: 0px solid transparent;
-    border-width: 0px 0px 0px 0px;
+    /* border: 0px solid transparent; */
+    /* border-width: 0px 0px 0px 0px; */
+    border: 7px solid rgb(255, 255, 255);
     -webkit-transform: scale(0.9);
     -moz-transform: scale(0.9);
     -ms-transform: scale(0.9);
@@ -18,7 +19,7 @@ div.game {
 
 .game img:hover {
     border-radius: 20%;
-    border-width: 0px 0px 0px 0px;
+    /* border-width: 0px 0px 0px 0px; */
     border-style: solid;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
