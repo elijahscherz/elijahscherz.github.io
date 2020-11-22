@@ -26,20 +26,18 @@ export class ProjectsComponent implements OnInit {
   faRaspberryPi = faRaspberryPi;
 
   gists: Array<Object> = new Array<Object>();
-  repos;
+  // repos;
   isMobile: Boolean = false;
 
   constructor(
     private githubService: GithubService,
     private deviceService: DeviceDetectorService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.isMobile = this.deviceService.isMobile();
 
-    let gistsObservable = this.githubService.getGists();
-
-    gistsObservable.subscribe((gists: any) => {
+    this.githubService.getGists().subscribe((gists: any) => {
       gists.forEach((gist: any) => {
         // Loop through the files to get the rawUrl and the code
         for (let key of Object.keys(gist.files)) {
@@ -53,6 +51,6 @@ export class ProjectsComponent implements OnInit {
       });
     });
 
-    this.repos = this.githubService.getRepos();
+    // this.repos = this.githubService.getRepos();
   }
 }

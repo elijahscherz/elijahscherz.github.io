@@ -38,6 +38,7 @@ import { HomeSkillsComponent } from './home-skills/home-skills.component';
 import { HomeProjectsComponent } from './home-projects/home-projects.component';
 import { HomeInterestsComponent } from './home-interests/home-interests.component';
 import { HomeContactComponent } from './home-contact/home-contact.component';
+import { BoardgamesComponent } from './boardgames/boardgames.component';
 
 export function hljsLanguages() {
   return [
@@ -68,7 +69,8 @@ export function hljsLanguages() {
     HomeSkillsComponent,
     HomeProjectsComponent,
     HomeInterestsComponent,
-    HomeContactComponent
+    HomeContactComponent,
+    BoardgamesComponent
   ],
   imports: [
     BrowserModule,
