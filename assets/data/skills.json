@@ -1,0 +1,62 @@
+[{
+    "name": "C/C++",
+    "percentage": 85,
+    "type": "language"
+  },
+  {
+    "name": "C#",
+    "percentage": 78,
+    "type": "language"
+  },
+  {
+    "name": "Python",
+    "percentage": 70,
+    "type": "language"
+  },
+  {
+    "name": "HTML/CSS",
+    "percentage": 50,
+    "type": "language"
+  },
+  {
+    "name": "Javascript/Typescript",
+    "percentage": 70,
+    "type": "language"
+  },
+  {
+    "name": "Amazon Web Services",
+    "percentage": 65,
+    "type": "technology"
+  },
+  {
+    "name": "Docker",
+    "percentage": 35,
+    "type": "technology"
+  },
+  {
+    "name": "Git",
+    "percentage": 75,
+    "type": "technology"
+  },
+  {
+    "name": "Shell",
+    "percentage": 60,
+    "type": "technology"
+  },
+  {
+    "name": "Angular",
+    "percentage": 68,
+    "type": "technology"
+  },
+  {
+    "name": "React",
+    "percentage": 60,
+    "type": "technology"
+  },
+  {
+    "name": "Unity",
+    "percentage": 60,
+    "type": "technology"
+  }
+
+]
