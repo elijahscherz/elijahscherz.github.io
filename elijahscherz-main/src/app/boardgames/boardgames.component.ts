@@ -8,7 +8,7 @@ import GamesJson from '../../assets/data/games.json';
 })
 export class BoardgamesComponent implements OnInit {
 
-  games: Array<Object> = GamesJson;
+  games: Array<any> = GamesJson;
   isMobile: boolean = false;
 
   constructor() { }

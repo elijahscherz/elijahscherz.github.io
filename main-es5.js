@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<section class=\"bg-charcoal text-center container-fluid p-lg-5 p-3\">\n    <div class=\"p-3\">\n        <div class=\"row h-100 align-items-center\">\n            <div class=\"col-lg-4 col-6 p-3\" *ngFor=\"let game of games\">\n                <div class=\"game p-3\">\n                    <img src=\"{{game.image}}\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>";
+    __webpack_exports__["default"] = "<section class=\"bg-charcoal text-center container-fluid p-lg-5 p-3\">\n    <div class=\"p-3\">\n\n        <!-- Desktop sorting button group -->\n        <div *ngIf=\"!isMobile\">\n            <div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">\n                <label class=\"btn btn-light btn-lg\">\n                    <input type=\"radio\" (click)=\"onClickAlpha()\" name=\"options\" id=\"option1\" autocomplete=\"off\">\n                    Alphabetical\n                </label>\n                <label class=\"btn btn-light btn-lg\">\n                    <input type=\"radio\" (click)=\"onClickGeek()\" name=\"options\" id=\"option2\" autocomplete=\"off\">\n                    Geek Rating\n                </label>\n                <label class=\"btn btn-light btn-lg\">\n                    <input type=\"radio\" (click)=\"onClickRating()\" name=\"options\" id=\"option3\" autocomplete=\"off\">\n                    My Rating\n                </label>\n                <label class=\"btn btn-light btn-lg\">\n                    <input type=\"radio\" (click)=\"onClickPlays()\" name=\"options\" id=\"option4\" autocomplete=\"off\"> Plays\n                </label>\n            </div>\n        </div>\n\n        <!-- Mobile sorting button group -->\n        <div *ngIf=\"isMobile\">\n            <div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\">\n                <label class=\"btn btn-light btn-sm\">\n                    <input type=\"radio\" (click)=\"onClickAlpha()\" name=\"options\" id=\"option1\" autocomplete=\"off\">\n                    Alphabetical\n                </label>\n                <label class=\"btn btn-light btn-sm\">\n                    <input type=\"radio\" (click)=\"onClickGeek()\" name=\"options\" id=\"option2\" autocomplete=\"off\">\n                    Geek Rating\n                </label>\n                <label class=\"btn btn-light btn-sm\">\n                    <input type=\"radio\" (click)=\"onClickRating()\" name=\"options\" id=\"option3\" autocomplete=\"off\"> My\n                    Rating\n                </label>\n                <label class=\"btn btn-light btn-sm\">\n                    <input type=\"radio\" (click)=\"onClickPlays()\" name=\"options\" id=\"option4\" autocomplete=\"off\"> Plays\n                </label>\n            </div>\n        </div>\n\n        <div class=\"row h-100 align-items-center\">\n            <div class=\"col-lg-4 col-6 p-3\" *ngFor=\"let game of games\">\n\n                <!-- Render each game -->\n                <div class=\"game p-3\">\n                    <img src=\"{{game.image}}\">\n                    <h2 *ngIf=\"!isMobile\">{{game.name.text}}</h2>\n                    <h5 *ngIf=\"isMobile\">{{game.name.text}}</h5>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>";
     /***/
   },
 
@@ -1489,7 +1489,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "div.game {\n    /* height: 50vh; */\n}\n\n.game img{\n    max-width: 100%;\n    max-height: 50vh;\n    border-radius: 10%;\n    box-shadow: 0 30px 32px 0 rgba(0, 0, 0, 0.295);\n    /* border: 0px solid transparent; */\n    /* border-width: 0px 0px 0px 0px; */\n    border: 7px solid rgb(255, 255, 255);\n    -webkit-transform: scale(0.9);\n    transform: scale(0.9);\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n\n.game img:hover {\n    border-radius: 20%;\n    /* border-width: 0px 0px 0px 0px; */\n    border-style: solid;\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYm9hcmRnYW1lcy9ib2FyZGdhbWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQiw4Q0FBOEM7SUFDOUMsbUNBQW1DO0lBQ25DLG1DQUFtQztJQUNuQyxvQ0FBb0M7SUFDcEMsNkJBQTZCO0lBRzdCLHFCQUFxQjtJQUNyQix1Q0FBK0I7SUFBL0IsK0JBQStCO0FBQ25DOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLG1DQUFtQztJQUNuQyxtQkFBbUI7SUFDbkIsNkJBQTZCO0lBRzdCLHFCQUFxQjtJQUNyQix1Q0FBK0I7SUFBL0IsK0JBQStCO0FBQ25DIiwiZmlsZSI6InNyYy9hcHAvYm9hcmRnYW1lcy9ib2FyZGdhbWVzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJkaXYuZ2FtZSB7XG4gICAgLyogaGVpZ2h0OiA1MHZoOyAqL1xufVxuXG4uZ2FtZSBpbWd7XG4gICAgbWF4LXdpZHRoOiAxMDAlO1xuICAgIG1heC1oZWlnaHQ6IDUwdmg7XG4gICAgYm9yZGVyLXJhZGl1czogMTAlO1xuICAgIGJveC1zaGFkb3c6IDAgMzBweCAzMnB4IDAgcmdiYSgwLCAwLCAwLCAwLjI5NSk7XG4gICAgLyogYm9yZGVyOiAwcHggc29saWQgdHJhbnNwYXJlbnQ7ICovXG4gICAgLyogYm9yZGVyLXdpZHRoOiAwcHggMHB4IDBweCAwcHg7ICovXG4gICAgYm9yZGVyOiA3cHggc29saWQgcmdiKDI1NSwgMjU1LCAyNTUpO1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiBzY2FsZSgwLjkpO1xuICAgIC1tb3otdHJhbnNmb3JtOiBzY2FsZSgwLjkpO1xuICAgIC1tcy10cmFuc2Zvcm06IHNjYWxlKDAuOSk7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgwLjkpO1xuICAgIHRyYW5zaXRpb246IGFsbCAuMnMgZWFzZS1pbi1vdXQ7XG59XG5cbi5nYW1lIGltZzpob3ZlciB7XG4gICAgYm9yZGVyLXJhZGl1czogMjAlO1xuICAgIC8qIGJvcmRlci13aWR0aDogMHB4IDBweCAwcHggMHB4OyAqL1xuICAgIGJvcmRlci1zdHlsZTogc29saWQ7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlKDEuMSk7XG4gICAgLW1vei10cmFuc2Zvcm06IHNjYWxlKDEuMSk7XG4gICAgLW1zLXRyYW5zZm9ybTogc2NhbGUoMS4xKTtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMSk7XG4gICAgdHJhbnNpdGlvbjogYWxsIC4ycyBlYXNlLWluLW91dDtcbn0iXX0= */";
+    __webpack_exports__["default"] = "div.game {\n    color: white;\n}\n\n.game img{\n    max-width: 100%;\n    max-height: 50vh;\n    border-radius: 10%;\n    box-shadow: 0 30px 32px 0 rgba(0, 0, 0, 0.295);\n    /* border: 0px solid transparent; */\n    /* border-width: 0px 0px 0px 0px; */\n    border: 7px solid rgb(255, 255, 255);\n    -webkit-transform: scale(0.9);\n    transform: scale(0.9);\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n\n.game img:hover {\n    border-radius: 20%;\n    /* border-width: 0px 0px 0px 0px; */\n    border-style: solid;\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n    -webkit-transition: all .2s ease-in-out;\n    transition: all .2s ease-in-out;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYm9hcmRnYW1lcy9ib2FyZGdhbWVzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsOENBQThDO0lBQzlDLG1DQUFtQztJQUNuQyxtQ0FBbUM7SUFDbkMsb0NBQW9DO0lBQ3BDLDZCQUE2QjtJQUc3QixxQkFBcUI7SUFDckIsdUNBQStCO0lBQS9CLCtCQUErQjtBQUNuQzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixtQ0FBbUM7SUFDbkMsbUJBQW1CO0lBQ25CLDZCQUE2QjtJQUc3QixxQkFBcUI7SUFDckIsdUNBQStCO0lBQS9CLCtCQUErQjtBQUNuQyIsImZpbGUiOiJzcmMvYXBwL2JvYXJkZ2FtZXMvYm9hcmRnYW1lcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmdhbWUge1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmdhbWUgaW1ne1xuICAgIG1heC13aWR0aDogMTAwJTtcbiAgICBtYXgtaGVpZ2h0OiA1MHZoO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwJTtcbiAgICBib3gtc2hhZG93OiAwIDMwcHggMzJweCAwIHJnYmEoMCwgMCwgMCwgMC4yOTUpO1xuICAgIC8qIGJvcmRlcjogMHB4IHNvbGlkIHRyYW5zcGFyZW50OyAqL1xuICAgIC8qIGJvcmRlci13aWR0aDogMHB4IDBweCAwcHggMHB4OyAqL1xuICAgIGJvcmRlcjogN3B4IHNvbGlkIHJnYigyNTUsIDI1NSwgMjU1KTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMC45KTtcbiAgICAtbW96LXRyYW5zZm9ybTogc2NhbGUoMC45KTtcbiAgICAtbXMtdHJhbnNmb3JtOiBzY2FsZSgwLjkpO1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMC45KTtcbiAgICB0cmFuc2l0aW9uOiBhbGwgLjJzIGVhc2UtaW4tb3V0O1xufVxuXG4uZ2FtZSBpbWc6aG92ZXIge1xuICAgIGJvcmRlci1yYWRpdXM6IDIwJTtcbiAgICAvKiBib3JkZXItd2lkdGg6IDBweCAwcHggMHB4IDBweDsgKi9cbiAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xuICAgIC1tb3otdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xuICAgIC1tcy10cmFuc2Zvcm06IHNjYWxlKDEuMSk7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xuICAgIHRyYW5zaXRpb246IGFsbCAuMnMgZWFzZS1pbi1vdXQ7XG59Il19 */";
     /***/
   },
 
@@ -1540,12 +1540,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, BoardgamesComponent);
 
         this.games = _assets_data_games_json__WEBPACK_IMPORTED_MODULE_2__;
+        this.isMobile = false;
       }
 
       _createClass(BoardgamesComponent, [{
+        key: "onClickAlpha",
+        value: function onClickAlpha() {
+          this.games.sort(function (a, b) {
+            return a.name.text.localeCompare(b.name.text);
+          });
+        }
+      }, {
+        key: "onClickGeek",
+        value: function onClickGeek() {
+          this.games.sort(function (a, b) {
+            return a.stats.rating.average.value - b.stats.rating.average.value;
+          }).reverse();
+        }
+      }, {
+        key: "onClickRating",
+        value: function onClickRating() {// this.games.sort((a, b) => {
+          //   return a.numplays - b.numplays;
+          // }).reverse();
+        }
+      }, {
+        key: "onClickPlays",
+        value: function onClickPlays() {
+          this.games.sort(function (a, b) {
+            return a.numplays - b.numplays;
+          }).reverse();
+        }
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          // Randomize the game page display
+          // Fairly simple mobile detection method
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            this.isMobile = true;
+          } // Randomize the game page display to start
+
+
           this.games.sort(function () {
             return Math.random() - 0.5;
           });
