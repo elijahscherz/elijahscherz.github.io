@@ -3,7 +3,7 @@
 set -Eeuo pipefail
 set -x
 
-rm *.*
+rm -f *.*
 rm -rf assets
 cd elijahscherz-main/
 ng build

@@ -48,7 +48,10 @@
 
                 <!-- Render each game -->
                 <div class="game p-3">
-                    <img src="{{game.image}}">
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://boardgamegeek.com/boardgame/{{game.objectid}}">
+                        <img src="{{game.image}}">
+                    </a>
                     <h2 *ngIf="!isMobile">{{game.name.text}}</h2>
                     <h5 *ngIf="isMobile">{{game.name.text}}</h5>
                 </div>
