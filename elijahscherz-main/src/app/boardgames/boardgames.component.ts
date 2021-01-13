@@ -8,6 +8,11 @@ import GamesJson from '../../assets/data/games.json';
 })
 export class BoardgamesComponent implements OnInit {
 
+  // https://www.boardgamegeek.com/xmlapi2/collection?username=elijahscherz&stats=1&own=1&excludesubtype=boardgameexpansion
+  // Download this XML file
+  // Convert to JSON with: https://www.freeformatter.com/xml-to-json-converter.html (change the text field to just "text")
+  // Download it and save it as data/games.json
+  // Remove the characters before and after the list [] brackets
   games: Array<any> = GamesJson;
   isMobile: boolean = false;
 
@@ -24,9 +29,19 @@ export class BoardgamesComponent implements OnInit {
     }).reverse();
   }
   onClickRating() {
-    // this.games.sort((a, b) => {
-    //   return a.numplays - b.numplays;
-    // }).reverse();
+    this.games.sort((a, b) => {
+
+      // If I haven't rated one of the games, then just use the average
+      if (a.stats.rating.value === "N/A") {
+        a.stats.rating.value = a.stats.rating.average.value;
+      }
+
+      if (b.stats.rating.value === "N/A") {
+        b.stats.rating.value = b.stats.rating.average.value;
+      }
+
+      return a.stats.rating.value - b.stats.rating.value;
+    }).reverse();
   }
   onClickPlays() {
     this.games.sort((a, b) => {
@@ -37,7 +52,7 @@ export class BoardgamesComponent implements OnInit {
   ngOnInit() {
 
     // Fairly simple mobile detection method
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       this.isMobile = true;
     }
 
