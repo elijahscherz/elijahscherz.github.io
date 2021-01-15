@@ -3,43 +3,71 @@
 
         <!-- Desktop sorting button group -->
         <div *ngIf="!isMobile">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-light btn-lg">
-                    <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
-                    Alphabetical
-                </label>
-                <label class="btn btn-light btn-lg">
-                    <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
-                    Geek Rating
-                </label>
-                <label class="btn btn-light btn-lg">
-                    <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off">
-                    My Rating
-                </label>
-                <label class="btn btn-light btn-lg">
-                    <input type="radio" (click)="onClickPlays()" name="options" id="option4" autocomplete="off"> Plays
-                </label>
+            <div class="btn-toolbar p-1" role="toolbar">
+                <div class="btn-group btn-group-lg btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+                    <label class="btn btn-light btn-lg">
+                        <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
+                        Alphabetical
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
+                        Geek Rating
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off">
+                        My Rating
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickPlays()" name="options" id="option4" autocomplete="off">
+                        Plays
+                    </label>
+                </div>
+            </div>
+            <div class="btn-toolbar p-1" role="toolbar">
+                <div class="btn-group btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+                    <label class="btn btn-light active">
+                        <input type="checkbox" (click)="onClickBoardGames()" checked autocomplete="off"> Board
+                        Games
+                    </label>
+                    <label class="btn btn-light active">
+                        <input type="checkbox" (click)="onClickExpansions()" autocomplete="off"> Expansions
+                    </label>
+                </div>
             </div>
         </div>
 
         <!-- Mobile sorting button group -->
         <div *ngIf="isMobile">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-light btn-sm">
-                    <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
-                    Alphabetical
-                </label>
-                <label class="btn btn-light btn-sm">
-                    <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
-                    Geek Rating
-                </label>
-                <label class="btn btn-light btn-sm">
-                    <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off"> My
-                    Rating
-                </label>
-                <label class="btn btn-light btn-sm">
-                    <input type="radio" (click)="onClickPlays()" name="options" id="option4" autocomplete="off"> Plays
-                </label>
+            <div class="btn-toolbar p-1" role="toolbar">
+                <div class="btn-group btn-group-sm btn-group-toggle mx-auto" data-toggle="buttons">
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
+                        Alphabetical
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
+                        Geek Rating
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off"> My
+                        Rating
+                    </label>
+                    <label class="btn btn-light">
+                        <input type="radio" (click)="onClickPlays()" name="options" id="option4" autocomplete="off">
+                        Plays
+                    </label>
+                </div>
+            </div>
+            <div class="btn-toolbar p-1" role="toolbar">
+                <div class="btn-group btn-group-sm btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+                    <label class="btn btn-light active">
+                        <input type="checkbox" (click)="onClickBoardGames()" checked autocomplete="off"> Board
+                        Games
+                    </label>
+                    <label class="btn btn-light active">
+                        <input type="checkbox" (click)="onClickExpansions()" autocomplete="off"> Expansions
+                    </label>
+                </div>
             </div>
         </div>
 
