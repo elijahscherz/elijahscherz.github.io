@@ -27,3 +27,9 @@ div.game {
     transform: scale(1.1);
     transition: all .2s ease-in-out;
 }
+
+.btn-group .btn-light.active {
+    background-color:rgb(111, 98, 133);
+    color: white;
+    border-color: rgb(111, 98, 133);
+}

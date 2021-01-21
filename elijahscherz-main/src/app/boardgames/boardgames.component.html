@@ -24,12 +24,12 @@
                 </div>
             </div>
             <div class="btn-toolbar p-1" role="toolbar">
-                <div class="btn-group btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+                <div class="type-filter btn-group btn-group-toggle mx-auto" role="group" data-toggle="buttons">
                     <label class="btn btn-light active">
                         <input type="checkbox" (click)="onClickBoardGames()" checked autocomplete="off"> Board
                         Games
                     </label>
-                    <label class="btn btn-light active">
+                    <label class="btn btn-light">
                         <input type="checkbox" (click)="onClickExpansions()" autocomplete="off"> Expansions
                     </label>
                 </div>
@@ -59,12 +59,13 @@
                 </div>
             </div>
             <div class="btn-toolbar p-1" role="toolbar">
-                <div class="btn-group btn-group-sm btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+                <div class="type-filter btn-group btn-group-sm btn-group-toggle mx-auto" role="group"
+                    data-toggle="buttons">
                     <label class="btn btn-light active">
                         <input type="checkbox" (click)="onClickBoardGames()" checked autocomplete="off"> Board
                         Games
                     </label>
-                    <label class="btn btn-light active">
+                    <label class="btn btn-light">
                         <input type="checkbox" (click)="onClickExpansions()" autocomplete="off"> Expansions
                     </label>
                 </div>
@@ -76,6 +77,8 @@
 
                 <!-- Render each game -->
                 <div class="game p-3">
+                    <!-- <h2 *ngIf="!isMobile && sortMethod === 'plays'">{{game.numplays}}</h2>
+                    <h5 *ngIf="isMobile && sortMethod === 'plays'">{{game.numplays}}</h5> -->
                     <a target="_blank" rel="noopener noreferrer"
                         href="https://boardgamegeek.com/boardgame/{{game.objectid}}">
                         <img src="{{game.image}}">
