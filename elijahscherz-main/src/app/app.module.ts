@@ -18,18 +18,12 @@ import { FooterComponent } from "./footer/footer.component";
 import { GithubService } from "./github.service";
 
 // Code Highlighting
-import { HighlightModule } from "ngx-highlightjs";
-import javascript from "highlight.js/lib/languages/javascript";
-import typescript from "highlight.js/lib/languages/typescript";
-import css from "highlight.js/lib/languages/css";
-import xml from "highlight.js/lib/languages/xml";
-import bash from "highlight.js/lib/languages/bash";
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 // FontAwesome
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 // Mobile detection
-import { DeviceDetectorModule } from "ngx-device-detector";
 import { ProjectComponent } from './project/project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeIntroComponent } from './home-intro/home-intro.component';
@@ -40,15 +34,8 @@ import { HomeInterestsComponent } from './home-interests/home-interests.componen
 import { HomeContactComponent } from './home-contact/home-contact.component';
 import { BoardgamesComponent } from './boardgames/boardgames.component';
 
-export function hljsLanguages() {
-  return [
-    { name: "typescript", func: typescript },
-    { name: "javascript", func: javascript },
-    { name: "css", func: css },
-    { name: "xml", func: xml },
-    { name: "bash", func: bash }
-  ];
-}
+// Angular Charts
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -76,14 +63,22 @@ export function hljsLanguages() {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HighlightModule.forRoot({
-      languages: hljsLanguages
-    }),
+    HighlightModule,
     FontAwesomeModule,
-    DeviceDetectorModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
-  providers: [GithubService],
+  providers: [
+    GithubService,
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
