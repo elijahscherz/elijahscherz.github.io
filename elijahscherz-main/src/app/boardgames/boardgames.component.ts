@@ -22,8 +22,12 @@ export class BoardgamesComponent implements OnInit {
   showGames: boolean = true;
   showExpansions: boolean = false;
   sortMethod: string = "alpha";
-  options: any;
+
+  playOptions: any;
+  dayOptions: any;
+  playerOptions: any;
   theme: any;
+  playLegend: any;
 
   constructor() { }
 
@@ -213,36 +217,38 @@ export class BoardgamesComponent implements OnInit {
       // Apply updates
       timeData[xAxisLabels.indexOf(label)] += play.durationMin;
       playData[xAxisLabels.indexOf(label)] += 1;
-
-      // If we haven't seen this month yet, add new label and start
-      // time aggregation
-      // if (!xAxisLabels.includes(label)) {
-      //   xAxisLabels.push(label);
-      //   timeData.push(parseInt(play.durationMin));
-      //   playData.push(1);
-      // }
-      // else {
-      //   // Add the time from this play to the total time of the month
-      //   timeData[xAxisLabels.indexOf(label)] += parseInt(play.durationMin);
-      //   playData[xAxisLabels.indexOf(label)] += 1;
-      // }
     }
-
-    // Reverse each array so they display chronologically
-    // xAxisLabels = xAxisLabels.reverse();
-    // timeData = timeData.reverse();
-    // playData = playData.reverse();
 
     // Convert times to hours played
     for (let i = 0; i < timeData.length; i++) {
       timeData[i] = Math.ceil(timeData[i] / 60);
     }
 
-    this.options = {
-      legend: {
+    // Adjust legend for mobile rendering
+    if (this.isMobile) {
+      this.playLegend = {
         data: ['Hours Played', 'Play Count'],
         align: 'left',
+        x: 'center',
+        y: 'bottom'
+      };
+    }
+    else {
+      this.playLegend = {
+        data: ['Hours Played', 'Play Count'],
+        align: 'left',
+        x: '20',
+        y: '10'
+      };
+    }
+
+    this.playOptions = {
+      title: {
+        text: 'Play Statistics',
+        subtext: 'Biweekly Plays and Hours',
+        x: 'center'
       },
+      legend: this.playLegend,
       tooltip: {},
       xAxis: {
         data: xAxisLabels,
@@ -269,6 +275,76 @@ export class BoardgamesComponent implements OnInit {
       animationEasing: 'elasticOut',
       animationDelayUpdate: (idx) => idx * 5,
     };
+
+    // this.dayOptions = {
+    //   title: {
+    //     text: 'Day Statistics',
+    //     x: 'center'
+    //   },
+    //   tooltip: {
+    //     trigger: 'item',
+    //     formatter: '{a} <br/>{b} : {c} ({d}%)'
+    //   },
+    //   legend: {
+    //     x: 'center',
+    //     y: 'bottom',
+    //     data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8']
+    //   },
+    //   calculable: true,
+    //   series: [
+    //     {
+    //       name: 'area',
+    //       type: 'pie',
+    //       radius: [30, 110],
+    //       roseType: 'area',
+    //       data: [
+    //         { value: 10, name: 'rose1' },
+    //         { value: 5, name: 'rose2' },
+    //         { value: 15, name: 'rose3' },
+    //         { value: 25, name: 'rose4' },
+    //         { value: 20, name: 'rose5' },
+    //         { value: 35, name: 'rose6' },
+    //         { value: 30, name: 'rose7' },
+    //         { value: 40, name: 'rose8' }
+    //       ]
+    //     }
+    //   ]
+    // };
+
+    // this.playerOptions = {
+    //   title: {
+    //     text: 'Player Statistics',
+    //     x: 'center'
+    //   },
+    //   tooltip: {
+    //     trigger: 'item',
+    //     formatter: '{a} <br/>{b} : {c} ({d}%)'
+    //   },
+    //   legend: {
+    //     x: 'center',
+    //     y: 'bottom',
+    //     data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8']
+    //   },
+    //   calculable: true,
+    //   series: [
+    //     {
+    //       name: 'area',
+    //       type: 'pie',
+    //       radius: [0, 120],
+    //       roseType: 'area',
+    //       data: [
+    //         { value: 10, name: 'rose1' },
+    //         { value: 5, name: 'rose2' },
+    //         { value: 15, name: 'rose3' },
+    //         { value: 25, name: 'rose4' },
+    //         { value: 20, name: 'rose5' },
+    //         { value: 35, name: 'rose6' },
+    //         { value: 30, name: 'rose7' },
+    //         { value: 40, name: 'rose8' }
+    //       ]
+    //     }
+    //   ]
+    // };
   }
 
 }
