@@ -9,6 +9,7 @@ cd elijahscherz-main/
 ng build
 cd ..
 cp -r elijahscherz-main/dist/elijahscherz-main/* .
+cp elijahscherz-main/README.md .
 git add -A
 git commit -m "Pushing build to live prod env from script"
 git push

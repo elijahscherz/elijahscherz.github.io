@@ -22,11 +22,11 @@
               <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
               Alphabetical
             </label>
-            <label class="btn btn-light">
+            <label class="btn btn-light disabled">
               <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
               Geek Rating
             </label>
-            <label class="btn btn-light">
+            <label class="btn btn-light disabled">
               <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off">
               My Rating
             </label>
@@ -57,11 +57,11 @@
               <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
               Alphabetical
             </label>
-            <label class="btn btn-light">
+            <label class="btn btn-light disabled">
               <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
               Geek Rating
             </label>
-            <label class="btn btn-light">
+            <label class="btn btn-light disabled">
               <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off"> My
               Rating
             </label>
@@ -93,11 +93,11 @@
         <div class="game p-3">
           <!-- <h2 *ngIf="!isMobile && sortMethod === 'plays'">{{game.numplays}}</h2>
                     <h5 *ngIf="isMobile && sortMethod === 'plays'">{{game.numplays}}</h5> -->
-          <a target="_blank" rel="noopener noreferrer" href="https://boardgamegeek.com/boardgame/{{game.objectid}}">
-            <img src="{{game.image}}">
+          <a target="_blank" rel="noopener noreferrer" href="https://boardgamegeek.com/boardgame/{{game.bggId}}">
+            <img src="{{game.urlImage}}">
           </a>
-          <h2 *ngIf="!isMobile">{{game.name.text}}</h2>
-          <h5 *ngIf="isMobile">{{game.name.text}}</h5>
+          <h2 *ngIf="!isMobile">{{game.name}}</h2>
+          <h5 *ngIf="isMobile">{{game.name}}</h5>
         </div>
       </div>
     </div>

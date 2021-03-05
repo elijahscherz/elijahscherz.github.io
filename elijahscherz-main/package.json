@@ -25,6 +25,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@types/bootstrap": "^5.0.8",
+    "@types/jquery": "^3.5.5",
     "bootstrap": "^4.6.0",
     "echarts": "^5.0.2",
     "highlight.js": ">=10.6.0",

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import 'bootstrap';
+// import * as $ from 'jquery';
 import GamesJson from '../../assets/data/games.json';
 import BGStatsJson from '../../assets/data/BGStatsExport.json';
 // import '../../assets/js/shine.js';
@@ -16,12 +18,13 @@ export class BoardgamesComponent implements OnInit {
   // Convert to JSON with: https://www.freeformatter.com/xml-to-json-converter.html (change the text field to just "text")
   // Download it and save it as data/games.json
   // Remove the characters before and after the list [] brackets
-  games: Array<any> = GamesJson;
+  games: Array<any> = BGStatsJson.games;
   stats: any = BGStatsJson;
   isMobile: boolean = false;
   showGames: boolean = true;
   showExpansions: boolean = false;
   sortMethod: string = "alpha";
+  gamePlayData: Object = null;
 
   playOptions: any;
   dayOptions: any;
@@ -36,10 +39,11 @@ export class BoardgamesComponent implements OnInit {
 
     this.games.sort((a, b) => {
       // Sorts alphabetically! (localCompare)
-      return a.name.text.localeCompare(b.name.text);
+      return a.name.localeCompare(b.name);
     });
   }
 
+  // TODO: outdated
   onClickGeek() {
     this.sortMethod = "geek";
 
@@ -48,6 +52,7 @@ export class BoardgamesComponent implements OnInit {
     }).reverse();
   }
 
+  // TODO: outdated
   onClickRating() {
     this.sortMethod = "rating";
 
@@ -70,7 +75,17 @@ export class BoardgamesComponent implements OnInit {
     this.sortMethod = "plays";
 
     this.games.sort((a, b) => {
-      return a.numplays - b.numplays;
+
+      // Check and make sure to set plays to 0 if there aren't any plays
+      if (!(a.name in this.gamePlayData)) {
+        this.gamePlayData[a.name] = 0;
+      }
+
+      if (!(b.name in this.gamePlayData)) {
+        this.gamePlayData[b.name] = 0;
+      }
+
+      return this.gamePlayData[a.name] - this.gamePlayData[b.name];
     }).reverse();
   }
 
@@ -86,18 +101,35 @@ export class BoardgamesComponent implements OnInit {
     this.refreshListing();
   }
 
+  generatePlayData() {
+    // Check if we have crunched these numbers yet or not
+    if (this.gamePlayData === null) {
+      this.gamePlayData = {};
+
+      // Get the play data into memory
+      // TODO: this seems slow as heck. Might just want to make a script that permanently records this info
+      for (let play of this.stats.plays) {
+        if (!(this.stats.games[play.gameRefId - 1].name in this.gamePlayData)) {
+          this.gamePlayData[this.stats.games[play.gameRefId - 1].name] = 0;
+        }
+
+        this.gamePlayData[this.stats.games[play.gameRefId - 1].name] += 1;
+      }
+    }
+  }
+
   refreshListing() {
 
     // First reset the entire listing
-    this.games = GamesJson;
+    this.games = BGStatsJson.games;
 
     // Filter based on what the user currently wants to view on the page
     this.games = this.games.filter(game => {
-      if (game.subtype === "boardgame" && this.showGames) {
+      if (this.showGames && game.name in this.gamePlayData) {
         return true;
       }
 
-      if (game.subtype === "boardgameexpansion" && this.showExpansions) {
+      if (this.showExpansions && game.isExpansion === 1 && game.copies.length && game.copies[0].statusOwned === 1) {
         return true;
       }
 
@@ -110,10 +142,10 @@ export class BoardgamesComponent implements OnInit {
       this.onClickAlpha();
     }
     else if (this.sortMethod === "geek") {
-      this.onClickGeek();
+      // this.onClickGeek();
     }
     else if (this.sortMethod === "rating") {
-      this.onClickRating();
+      // this.onClickRating();
     }
     else {
       // Last available category is Plays
@@ -121,18 +153,7 @@ export class BoardgamesComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-
-    // Fairly simple mobile detection method
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      this.isMobile = true;
-    }
-
-    this.refreshListing();
-
-    // Randomize the game page display to start
-    this.games.sort(() => Math.random() - 0.5);
-
+  generateCharts() {
     // PLAY TIME CHART
 
     // this.theme = "shine";
@@ -198,11 +219,6 @@ export class BoardgamesComponent implements OnInit {
       const date = new Date(play.playDate);
       // const label = date.getMonth() + 1 + "/" + date.getFullYear();
       let [month, day, year] = date.toLocaleDateString("en-US").split("/");
-
-      if (day === "31") {
-        console.log(month);
-        console.log(play);
-      }
 
       // Round the date of this play to the needed week
       if (Number(day) > 15) {
@@ -345,6 +361,23 @@ export class BoardgamesComponent implements OnInit {
     //     }
     //   ]
     // };
+  }
+
+  ngOnInit() {
+
+    // Fairly simple mobile detection method
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      this.isMobile = true;
+    }
+
+    this.generatePlayData();
+
+    this.refreshListing();
+
+    // Randomize the game page display to start
+    this.games.sort(() => Math.random() - 0.5);
+
+    this.generateCharts();
   }
 
 }
