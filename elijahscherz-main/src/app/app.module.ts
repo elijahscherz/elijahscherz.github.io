@@ -36,6 +36,8 @@ import { BoardgamesComponent } from './boardgames/boardgames.component';
 
 // Angular Charts
 import { NgxEchartsModule } from 'ngx-echarts';
+import { BoardgamesStatsComponent } from './boardgames-stats/boardgames-stats.component';
+import { BoardgamesToolsComponent } from './boardgames-tools/boardgames-tools.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
     HomeProjectsComponent,
     HomeInterestsComponent,
     HomeContactComponent,
-    BoardgamesComponent
+    BoardgamesComponent,
+    BoardgamesStatsComponent,
+    BoardgamesToolsComponent
   ],
   imports: [
     BrowserModule,

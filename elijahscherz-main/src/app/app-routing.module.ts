@@ -5,6 +5,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { BoardgamesComponent } from './boardgames/boardgames.component';
+import { BoardgamesStatsComponent } from './boardgames-stats/boardgames-stats.component';
+import { BoardgamesToolsComponent } from './boardgames-tools/boardgames-tools.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,14 @@ const routes: Routes = [
   {
     path: 'boardgames',
     component: BoardgamesComponent
+  },
+  {
+    path: 'boardgames/stats',
+    component: BoardgamesStatsComponent
+  },
+  {
+    path: 'boardgames/tools',
+    component: BoardgamesToolsComponent
   },
   {
     path: 'contact',

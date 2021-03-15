@@ -10,11 +10,22 @@
 
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link active" routerLink="">HOME<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link active" routerLink="/projects">PROJECTS</a>
-      <a class="nav-item nav-link active" routerLink="/boardgames">BOARDGAMES</a>
+      <a class="nav-item nav-link" routerLink="">HOME<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLink="/projects">PROJECTS</a>
+      <!-- <a class="nav-item nav-link" routerLink="/boardgames">BOARDGAMES</a> -->
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          BOARDGAMES
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/boardgames">COLLECTION</a>
+          <a class="dropdown-item" routerLink="/boardgames/stats">STATS</a>
+          <a class="dropdown-item" routerLink="/boardgames/tools">TOOLS</a>
+        </div>
+      </div>
       <!-- <a class="nav-item nav-link active" routerLink="/experience">EXPERIENCE</a> -->
-      <a class="nav-item nav-link active" routerLink="/contact">CONTACT</a>
+      <a class="nav-item nav-link" routerLink="/contact">CONTACT</a>
     </div>
   </div>
 </nav>
