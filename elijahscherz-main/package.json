@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -31,9 +30,9 @@
     "echarts": "^5.0.2",
     "highlight.js": ">=10.6.0",
     "jquery": "^3.5.1",
-    "ngx-device-detector": "^3.0.0",
+    "ngx-device-detector": "^4.0.1",
     "ngx-echarts": "^14.0.0",
-    "ngx-highlightjs": "^4.1.3",
+    "ngx-highlightjs": "^7.0.1",
     "popper": "^1.0.1",
     "rxjs": "~6.6.6",
     "tslib": "^2.1.0",
