@@ -3,7 +3,20 @@ import { Component, OnInit } from '@angular/core';
 // import * as $ from 'jquery';
 import GamesJson from '../../assets/data/games.json';
 import BGStatsJson from '../../assets/data/BGStatsExport.json';
-// import '../../assets/js/shine.js';
+
+/**
+ * Getting the boardgame JSON files -
+ * For games.json:
+ * https://www.boardgamegeek.com/xmlapi2/collection?username=elijahscherz&stats=1&own=1&excludesubtype=boardgameexpansion
+ * https://www.boardgamegeek.com/xmlapi2/collection?username=elijahscherz&stats=1&own=1&subtype=boardgameexpansion
+ * - Download this XML file
+ * - Convert to JSON with: https://www.freeformatter.com/xml-to-json-converter.html (change the text field to just "text")
+ * - Download it and save it as data/games.json
+ * - Remove the characters before and after the list [] brackets
+ * 
+ * For BGStatsExport.json:
+ * - Export from local app
+ */
 
 @Component({
   selector: 'app-boardgames',
@@ -11,13 +24,6 @@ import BGStatsJson from '../../assets/data/BGStatsExport.json';
   styleUrls: ['./boardgames.component.css']
 })
 export class BoardgamesComponent implements OnInit {
-
-  // https://www.boardgamegeek.com/xmlapi2/collection?username=elijahscherz&stats=1&own=1&excludesubtype=boardgameexpansion
-  // https://www.boardgamegeek.com/xmlapi2/collection?username=elijahscherz&stats=1&own=1&subtype=boardgameexpansion
-  // Download this XML file
-  // Convert to JSON with: https://www.freeformatter.com/xml-to-json-converter.html (change the text field to just "text")
-  // Download it and save it as data/games.json
-  // Remove the characters before and after the list [] brackets
   games: Array<any> = BGStatsJson.games;
   stats: any = BGStatsJson;
   isMobile: boolean = false;
@@ -33,6 +39,23 @@ export class BoardgamesComponent implements OnInit {
   playLegend: any;
 
   constructor() { }
+
+  ngOnInit() {
+
+    // Fairly simple mobile detection method
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      this.isMobile = true;
+    }
+
+    this.generatePlayData();
+
+    this.refreshListing();
+
+    // Randomize the game page display to start
+    this.games.sort(() => Math.random() - 0.5);
+
+    this.generateCharts();
+  }
 
   onClickAlpha() {
     this.sortMethod = "alpha";
@@ -362,22 +385,4 @@ export class BoardgamesComponent implements OnInit {
     //   ]
     // };
   }
-
-  ngOnInit() {
-
-    // Fairly simple mobile detection method
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      this.isMobile = true;
-    }
-
-    this.generatePlayData();
-
-    this.refreshListing();
-
-    // Randomize the game page display to start
-    this.games.sort(() => Math.random() - 0.5);
-
-    this.generateCharts();
-  }
-
 }
