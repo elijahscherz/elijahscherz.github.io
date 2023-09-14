@@ -70,7 +70,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "elijahscherz-main:build"
+            "browserTarget": "elijahscherz-main:build",
+            "hmr": true,
+            "open": true
           },
           "configurations": {
             "production": {
@@ -79,7 +81,8 @@
             "development": {
               "browserTarget": "elijahscherz-main:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

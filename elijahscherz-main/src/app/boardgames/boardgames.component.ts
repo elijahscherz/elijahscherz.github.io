@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ColorHelper, ScaleType } from "@swimlane/ngx-charts";
+import { Observable, of } from "rxjs";
 // import 'bootstrap';
 // import * as $ from 'jquery';
 import GamesJson from "../../assets/data/games.json";
@@ -38,9 +40,24 @@ export class BoardgamesComponent implements OnInit {
   theme: any;
   playLegend: any;
 
+  multiSeries: any[] = [];
+
+  fullGraphView: any[] = [3000, 450];
+
+  colors: any;
+
+  colorScheme = {
+    domain: ["#A45482", "#6AB04C"],
+  };
+
   constructor() {}
 
   ngOnInit() {
+    this.colors = new ColorHelper("cool", ScaleType.Ordinal, [
+      "Plays",
+      "Hours",
+    ]);
+
     // Fairly simple mobile detection method
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -57,7 +74,7 @@ export class BoardgamesComponent implements OnInit {
     // Randomize the game page display to start
     this.games.sort(() => Math.random() - 0.5);
 
-    this.generateCharts();
+    this.getChartData().subscribe((data) => (this.multiSeries = data));
   }
 
   onClickAlpha() {
@@ -184,7 +201,7 @@ export class BoardgamesComponent implements OnInit {
     }
   }
 
-  generateCharts() {
+  getChartData(): Observable<any> {
     // PLAY TIME CHART
 
     // this.theme = "shine";
@@ -289,6 +306,26 @@ export class BoardgamesComponent implements OnInit {
         y: "10",
       };
     }
+
+    const series = [];
+    for (let i = 0; i < xAxisLabels.length; ++i) {
+      series.push({
+        name: xAxisLabels[i],
+        series: [
+          { name: "Plays", value: playData[i] },
+          { name: "Hours", value: timeData[i] },
+        ],
+      });
+    }
+
+    const delayedData = new Observable((subscriber) => {
+      setTimeout(() => {
+        subscriber.next(series);
+        subscriber.complete();
+      }, 1000);
+    });
+
+    return delayedData;
 
     this.playOptions = {
       title: {
