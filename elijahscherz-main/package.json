@@ -24,6 +24,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@swimlane/ngx-charts": "^20.4.1",
     "@types/bootstrap": "^5.0.8",
     "@types/jquery": "^3.5.5",
     "bootstrap": "^4.6.0",
@@ -53,6 +54,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
+    "prettier": "^3.0.3",
     "ts-node": "~9.1.1",
     "tslint": "^6.1.0",
     "typescript": "^4.6.4"

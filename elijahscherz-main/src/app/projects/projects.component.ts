@@ -13,7 +13,7 @@ import { DeviceDetectorService } from "ngx-device-detector";
 @Component({
   selector: "app-projects",
   templateUrl: "./projects.component.html",
-  styleUrls: ["./projects.component.css"]
+  styleUrls: ["./projects.component.css"],
 })
 export class ProjectsComponent implements OnInit {
   faCircle = faCircle;
@@ -31,8 +31,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor(
     private githubService: GithubService,
-    private deviceService: DeviceDetectorService
-  ) { }
+    private deviceService: DeviceDetectorService,
+  ) {}
 
   ngOnInit() {
     this.isMobile = this.deviceService.isMobile();
@@ -43,7 +43,7 @@ export class ProjectsComponent implements OnInit {
         for (let key of Object.keys(gist.files)) {
           let rawUrl = gist.files[key].raw_url;
           let newGistObj = gist;
-          this.githubService.getGistCode(rawUrl).subscribe(value => {
+          this.githubService.getGistCode(rawUrl).subscribe((value) => {
             newGistObj.content = value;
             this.gists.push(newGistObj);
           });

@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BoardgamesToolsComponent } from './boardgames-tools.component';
+import { BoardgamesToolsComponent } from "./boardgames-tools.component";
 
-describe('BoardgamesToolsComponent', () => {
+describe("BoardgamesToolsComponent", () => {
   let component: BoardgamesToolsComponent;
   let fixture: ComponentFixture<BoardgamesToolsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BoardgamesToolsComponent ]
-    })
-    .compileComponents();
+      declarations: [BoardgamesToolsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('BoardgamesToolsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

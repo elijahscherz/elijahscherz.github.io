@@ -8,21 +8,18 @@ $(document).ready(function () {
   // var gradientString =
   //   "linear-gradient(to bottom,rgba(22, 22, 22, 0.3) 0,rgba(22, 22, 22, 0.7) 85%,#161616 100%), ";
   // splash.style.backgroundImage = gradientString + "url(" + pattern.png() + ")";
-
   // $("nav .nav-link").on("click", function () {
   //   $("nav")
   //     .find(".active")
   //     .removeClass("active");
   //   $(this).addClass("active");
   // });
-
   // $("#splashText h1").val("okay");
   // $("#splashText h3").val("");
   // setTimeout(startTypeWriters, 1000);
 });
 
 $(window).scroll(function (event) {
-
   $(".slide-up").each(function (i, el) {
     var el = $(el);
     if (el.visible(true)) {
@@ -43,7 +40,6 @@ $(window).scroll(function (event) {
       el.addClass("come-right");
     }
   });
-
 });
 
 function startTypeWriters() {
@@ -66,7 +62,14 @@ function typeWriter(i, txt, speed, elem) {
   if (i < txt.length) {
     elem.text(elem.text() + txt.charAt(i));
     i++;
-    setTimeout(typeWriter, getRandomInt(speed - 80, speed), i, txt, speed, elem);
+    setTimeout(
+      typeWriter,
+      getRandomInt(speed - 80, speed),
+      i,
+      txt,
+      speed,
+      elem,
+    );
   }
 }
 

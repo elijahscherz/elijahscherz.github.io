@@ -1,6 +1,5 @@
 <section class="bg-charcoal text-center container-fluid p-lg-5 p-3">
   <div class="p-3">
-
     <div echarts [options]="playOptions" [theme]="theme" class="chart"></div>
 
     <!-- <div class="row h-100 align-items-center">
@@ -17,33 +16,75 @@
       <!-- Desktop sorting button group -->
       <div *ngIf="!isMobile">
         <div class="btn-toolbar p-1" role="toolbar">
-          <div class="btn-group btn-group-lg btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+          <div
+            class="btn-group btn-group-lg btn-group-toggle mx-auto"
+            role="group"
+            data-toggle="buttons"
+          >
             <label class="btn btn-light btn-lg">
-              <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickAlpha()"
+                name="options"
+                id="option1"
+                autocomplete="off"
+              />
               Alphabetical
             </label>
             <label class="btn btn-light disabled">
-              <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickGeek()"
+                name="options"
+                id="option2"
+                autocomplete="off"
+              />
               Geek Rating
             </label>
             <label class="btn btn-light disabled">
-              <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickRating()"
+                name="options"
+                id="option3"
+                autocomplete="off"
+              />
               My Rating
             </label>
             <label class="btn btn-light">
-              <input type="radio" (click)="onClickPlays()" name="options" id="option4" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickPlays()"
+                name="options"
+                id="option4"
+                autocomplete="off"
+              />
               Plays
             </label>
           </div>
         </div>
         <div class="btn-toolbar p-1" role="toolbar">
-          <div class="type-filter btn-group btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+          <div
+            class="type-filter btn-group btn-group-toggle mx-auto"
+            role="group"
+            data-toggle="buttons"
+          >
             <label class="btn btn-light active">
-              <input type="checkbox" (click)="onClickBoardGames()" checked autocomplete="off"> Board
-              Games
+              <input
+                type="checkbox"
+                (click)="onClickBoardGames()"
+                checked
+                autocomplete="off"
+              />
+              Board Games
             </label>
             <label class="btn btn-light">
-              <input type="checkbox" (click)="onClickExpansions()" autocomplete="off"> Expansions
+              <input
+                type="checkbox"
+                (click)="onClickExpansions()"
+                autocomplete="off"
+              />
+              Expansions
             </label>
           </div>
         </div>
@@ -52,33 +93,74 @@
       <!-- Mobile sorting button group -->
       <div *ngIf="isMobile">
         <div class="btn-toolbar p-1" role="toolbar">
-          <div class="btn-group btn-group-sm btn-group-toggle mx-auto" data-toggle="buttons">
+          <div
+            class="btn-group btn-group-sm btn-group-toggle mx-auto"
+            data-toggle="buttons"
+          >
             <label class="btn btn-light">
-              <input type="radio" (click)="onClickAlpha()" name="options" id="option1" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickAlpha()"
+                name="options"
+                id="option1"
+                autocomplete="off"
+              />
               Alphabetical
             </label>
             <label class="btn btn-light disabled">
-              <input type="radio" (click)="onClickGeek()" name="options" id="option2" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickGeek()"
+                name="options"
+                id="option2"
+                autocomplete="off"
+              />
               Geek Rating
             </label>
             <label class="btn btn-light disabled">
-              <input type="radio" (click)="onClickRating()" name="options" id="option3" autocomplete="off"> My
-              Rating
+              <input
+                type="radio"
+                (click)="onClickRating()"
+                name="options"
+                id="option3"
+                autocomplete="off"
+              />
+              My Rating
             </label>
             <label class="btn btn-light">
-              <input type="radio" (click)="onClickPlays()" name="options" id="option4" autocomplete="off">
+              <input
+                type="radio"
+                (click)="onClickPlays()"
+                name="options"
+                id="option4"
+                autocomplete="off"
+              />
               Plays
             </label>
           </div>
         </div>
         <div class="btn-toolbar p-1" role="toolbar">
-          <div class="type-filter btn-group btn-group-sm btn-group-toggle mx-auto" role="group" data-toggle="buttons">
+          <div
+            class="type-filter btn-group btn-group-sm btn-group-toggle mx-auto"
+            role="group"
+            data-toggle="buttons"
+          >
             <label class="btn btn-light active">
-              <input type="checkbox" (click)="onClickBoardGames()" checked autocomplete="off"> Board
-              Games
+              <input
+                type="checkbox"
+                (click)="onClickBoardGames()"
+                checked
+                autocomplete="off"
+              />
+              Board Games
             </label>
             <label class="btn btn-light">
-              <input type="checkbox" (click)="onClickExpansions()" autocomplete="off"> Expansions
+              <input
+                type="checkbox"
+                (click)="onClickExpansions()"
+                autocomplete="off"
+              />
+              Expansions
             </label>
           </div>
         </div>
@@ -88,16 +170,19 @@
 
     <div class="row h-100 align-items-center">
       <div class="col-lg-4 col-6 p-3" *ngFor="let game of games">
-
         <!-- Render each game -->
         <div class="game p-3">
           <!-- <h2 *ngIf="!isMobile && sortMethod === 'plays'">{{game.numplays}}</h2>
                     <h5 *ngIf="isMobile && sortMethod === 'plays'">{{game.numplays}}</h5> -->
-          <a target="_blank" rel="noopener noreferrer" href="https://boardgamegeek.com/boardgame/{{game.bggId}}">
-            <img src="{{game.urlImage}}">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://boardgamegeek.com/boardgame/{{ game.bggId }}"
+          >
+            <img src="{{ game.urlImage }}" />
           </a>
-          <h2 *ngIf="!isMobile">{{game.name}}</h2>
-          <h5 *ngIf="isMobile">{{game.name}}</h5>
+          <h2 *ngIf="!isMobile">{{ game.name }}</h2>
+          <h5 *ngIf="isMobile">{{ game.name }}</h5>
         </div>
       </div>
     </div>

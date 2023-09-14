@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { HomeInterestsComponent } from './home-interests.component';
+import { HomeInterestsComponent } from "./home-interests.component";
 
-describe('HomeInterestsComponent', () => {
+describe("HomeInterestsComponent", () => {
   let component: HomeInterestsComponent;
   let fixture: ComponentFixture<HomeInterestsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeInterestsComponent ]
-    })
-    .compileComponents();
+      declarations: [HomeInterestsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('HomeInterestsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

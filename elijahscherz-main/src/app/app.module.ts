@@ -18,26 +18,27 @@ import { FooterComponent } from "./footer/footer.component";
 import { GithubService } from "./github.service";
 
 // Code Highlighting
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
 
 // FontAwesome
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 // Mobile detection
-import { ProjectComponent } from './project/project.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeIntroComponent } from './home-intro/home-intro.component';
-import { HomeResumeComponent } from './home-resume/home-resume.component';
-import { HomeSkillsComponent } from './home-skills/home-skills.component';
-import { HomeProjectsComponent } from './home-projects/home-projects.component';
-import { HomeInterestsComponent } from './home-interests/home-interests.component';
-import { HomeContactComponent } from './home-contact/home-contact.component';
-import { BoardgamesComponent } from './boardgames/boardgames.component';
+import { ProjectComponent } from "./project/project.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HomeIntroComponent } from "./home-intro/home-intro.component";
+import { HomeResumeComponent } from "./home-resume/home-resume.component";
+import { HomeSkillsComponent } from "./home-skills/home-skills.component";
+import { HomeProjectsComponent } from "./home-projects/home-projects.component";
+import { HomeInterestsComponent } from "./home-interests/home-interests.component";
+import { HomeContactComponent } from "./home-contact/home-contact.component";
+import { BoardgamesComponent } from "./boardgames/boardgames.component";
 
 // Angular Charts
-import { NgxEchartsModule } from 'ngx-echarts';
-import { BoardgamesStatsComponent } from './boardgames-stats/boardgames-stats.component';
-import { BoardgamesToolsComponent } from './boardgames-tools/boardgames-tools.component';
+import { NgxEchartsModule } from "ngx-echarts";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { BoardgamesStatsComponent } from "./boardgames-stats/boardgames-stats.component";
+import { BoardgamesToolsComponent } from "./boardgames-tools/boardgames-tools.component";
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { BoardgamesToolsComponent } from './boardgames-tools/boardgames-tools.co
     HomeContactComponent,
     BoardgamesComponent,
     BoardgamesStatsComponent,
-    BoardgamesToolsComponent
+    BoardgamesToolsComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,18 +72,19 @@ import { BoardgamesToolsComponent } from './boardgames-tools/boardgames-tools.co
     FontAwesomeModule,
     BrowserAnimationsModule,
     NgxEchartsModule.forRoot({
-      echarts: () => import('echarts')
-    })
+      echarts: () => import("echarts"),
+    }),
+    NgxChartsModule,
   ],
   providers: [
     GithubService,
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
-      }
-    }
+        fullLibraryLoader: () => import("highlight.js"),
+      },
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

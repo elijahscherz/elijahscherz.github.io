@@ -1,13 +1,12 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class GithubService {
-
   // Define GitHub API url
-  apiUrl = 'https://api.github.com/users/elijahscherz';
+  apiUrl = "https://api.github.com/users/elijahscherz";
 
   constructor(private http: HttpClient) {}
 

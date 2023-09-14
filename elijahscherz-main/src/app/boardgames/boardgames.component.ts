@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 // import 'bootstrap';
 // import * as $ from 'jquery';
-import GamesJson from '../../assets/data/games.json';
-import BGStatsJson from '../../assets/data/BGStatsExport.json';
+import GamesJson from "../../assets/data/games.json";
+import BGStatsJson from "../../assets/data/BGStatsExport.json";
 
 /**
  * Getting the boardgame JSON files -
@@ -13,15 +13,15 @@ import BGStatsJson from '../../assets/data/BGStatsExport.json';
  * - Convert to JSON with: https://www.freeformatter.com/xml-to-json-converter.html (change the text field to just "text")
  * - Download it and save it as data/games.json
  * - Remove the characters before and after the list [] brackets
- * 
+ *
  * For BGStatsExport.json:
  * - Export from local app
  */
 
 @Component({
-  selector: 'app-boardgames',
-  templateUrl: './boardgames.component.html',
-  styleUrls: ['./boardgames.component.css']
+  selector: "app-boardgames",
+  templateUrl: "./boardgames.component.html",
+  styleUrls: ["./boardgames.component.css"],
 })
 export class BoardgamesComponent implements OnInit {
   games: Array<any> = BGStatsJson.games;
@@ -38,12 +38,15 @@ export class BoardgamesComponent implements OnInit {
   theme: any;
   playLegend: any;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-
     // Fairly simple mobile detection method
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      )
+    ) {
       this.isMobile = true;
     }
 
@@ -70,46 +73,50 @@ export class BoardgamesComponent implements OnInit {
   onClickGeek() {
     this.sortMethod = "geek";
 
-    this.games.sort((a, b) => {
-      return a.stats.rating.average.value - b.stats.rating.average.value;
-    }).reverse();
+    this.games
+      .sort((a, b) => {
+        return a.stats.rating.average.value - b.stats.rating.average.value;
+      })
+      .reverse();
   }
 
   // TODO: outdated
   onClickRating() {
     this.sortMethod = "rating";
 
-    this.games.sort((a, b) => {
+    this.games
+      .sort((a, b) => {
+        // If I haven't rated one of the games, then just use the average
+        if (a.stats.rating.value === "N/A") {
+          a.stats.rating.value = a.stats.rating.average.value;
+        }
 
-      // If I haven't rated one of the games, then just use the average
-      if (a.stats.rating.value === "N/A") {
-        a.stats.rating.value = a.stats.rating.average.value;
-      }
+        if (b.stats.rating.value === "N/A") {
+          b.stats.rating.value = b.stats.rating.average.value;
+        }
 
-      if (b.stats.rating.value === "N/A") {
-        b.stats.rating.value = b.stats.rating.average.value;
-      }
-
-      return a.stats.rating.value - b.stats.rating.value;
-    }).reverse();
+        return a.stats.rating.value - b.stats.rating.value;
+      })
+      .reverse();
   }
 
   onClickPlays() {
     this.sortMethod = "plays";
 
-    this.games.sort((a, b) => {
+    this.games
+      .sort((a, b) => {
+        // Check and make sure to set plays to 0 if there aren't any plays
+        if (!(a.name in this.gamePlayData)) {
+          this.gamePlayData[a.name] = 0;
+        }
 
-      // Check and make sure to set plays to 0 if there aren't any plays
-      if (!(a.name in this.gamePlayData)) {
-        this.gamePlayData[a.name] = 0;
-      }
+        if (!(b.name in this.gamePlayData)) {
+          this.gamePlayData[b.name] = 0;
+        }
 
-      if (!(b.name in this.gamePlayData)) {
-        this.gamePlayData[b.name] = 0;
-      }
-
-      return this.gamePlayData[a.name] - this.gamePlayData[b.name];
-    }).reverse();
+        return this.gamePlayData[a.name] - this.gamePlayData[b.name];
+      })
+      .reverse();
   }
 
   onClickBoardGames() {
@@ -142,17 +149,21 @@ export class BoardgamesComponent implements OnInit {
   }
 
   refreshListing() {
-
     // First reset the entire listing
     this.games = BGStatsJson.games;
 
     // Filter based on what the user currently wants to view on the page
-    this.games = this.games.filter(game => {
+    this.games = this.games.filter((game) => {
       if (this.showGames && game.name in this.gamePlayData) {
         return true;
       }
 
-      if (this.showExpansions && game.isExpansion === 1 && game.copies.length && game.copies[0].statusOwned === 1) {
+      if (
+        this.showExpansions &&
+        game.isExpansion === 1 &&
+        game.copies.length &&
+        game.copies[0].statusOwned === 1
+      ) {
         return true;
       }
 
@@ -163,14 +174,11 @@ export class BoardgamesComponent implements OnInit {
     // TODO: change this to enums
     if (this.sortMethod === "alpha") {
       this.onClickAlpha();
-    }
-    else if (this.sortMethod === "geek") {
+    } else if (this.sortMethod === "geek") {
       // this.onClickGeek();
-    }
-    else if (this.sortMethod === "rating") {
+    } else if (this.sortMethod === "rating") {
       // this.onClickRating();
-    }
-    else {
+    } else {
       // Last available category is Plays
       this.onClickPlays();
     }
@@ -187,10 +195,14 @@ export class BoardgamesComponent implements OnInit {
 
     // PREPARE DATA FOR CHART //
 
-    let [currMonth, currDay, currYear] = new Date().toLocaleDateString("en-US").split("/");
+    let [currMonth, currDay, currYear] = new Date()
+      .toLocaleDateString("en-US")
+      .split("/");
 
     // First recorded plays are in July, we begin there
-    let [mString, dString, yString] = new Date(2020, 7, 1).toLocaleDateString("en-US").split("/");
+    let [mString, dString, yString] = new Date(2020, 7, 1)
+      .toLocaleDateString("en-US")
+      .split("/");
 
     let m = Number(mString);
     let d = Number(dString);
@@ -199,8 +211,7 @@ export class BoardgamesComponent implements OnInit {
     // Round the current day to either the middle of the month or the end
     if (Number(currDay) > 15) {
       currDay = "30";
-    }
-    else {
+    } else {
       currDay = "1";
     }
 
@@ -209,15 +220,16 @@ export class BoardgamesComponent implements OnInit {
     timeData.push(0);
     playData.push(0);
 
-    while (m < Number(currMonth) || d < Number(currDay) || y < Number(currYear)) {
-
+    while (
+      m < Number(currMonth) ||
+      d < Number(currDay) ||
+      y < Number(currYear)
+    ) {
       // Update day first
       // If we are using 1 currently, switch to end of the month
       if (d === 1) {
         d = 30;
-      }
-      else {
-
+      } else {
         // If we are back at the beginning of the month...
         d = 1;
 
@@ -225,8 +237,7 @@ export class BoardgamesComponent implements OnInit {
         if (m === 12) {
           m = 1;
           y += 1;
-        }
-        else {
+        } else {
           m += 1;
         }
       }
@@ -246,8 +257,7 @@ export class BoardgamesComponent implements OnInit {
       // Round the date of this play to the needed week
       if (Number(day) > 15) {
         day = "30";
-      }
-      else {
+      } else {
         day = "1";
       }
 
@@ -266,26 +276,25 @@ export class BoardgamesComponent implements OnInit {
     // Adjust legend for mobile rendering
     if (this.isMobile) {
       this.playLegend = {
-        data: ['Hours Played', 'Play Count'],
-        align: 'left',
-        x: 'center',
-        y: 'bottom'
+        data: ["Hours Played", "Play Count"],
+        align: "left",
+        x: "center",
+        y: "bottom",
       };
-    }
-    else {
+    } else {
       this.playLegend = {
-        data: ['Hours Played', 'Play Count'],
-        align: 'left',
-        x: '20',
-        y: '10'
+        data: ["Hours Played", "Play Count"],
+        align: "left",
+        x: "20",
+        y: "10",
       };
     }
 
     this.playOptions = {
       title: {
-        text: 'Play Statistics',
-        subtext: 'Biweekly Plays and Hours',
-        x: 'center'
+        text: "Play Statistics",
+        subtext: "Biweekly Plays and Hours",
+        x: "center",
       },
       legend: this.playLegend,
       tooltip: {},
@@ -299,19 +308,19 @@ export class BoardgamesComponent implements OnInit {
       yAxis: {},
       series: [
         {
-          name: 'Hours Played',
-          type: 'bar',
+          name: "Hours Played",
+          type: "bar",
           data: timeData,
           animationDelay: (idx) => idx * 10,
         },
         {
-          name: 'Play Count',
-          type: 'bar',
+          name: "Play Count",
+          type: "bar",
           data: playData,
           animationDelay: (idx) => idx * 10 + 100,
         },
       ],
-      animationEasing: 'elasticOut',
+      animationEasing: "elasticOut",
       animationDelayUpdate: (idx) => idx * 5,
     };
 

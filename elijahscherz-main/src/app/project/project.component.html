@@ -3,10 +3,14 @@
     <div class="text-center p-4">
       <fa-layers class="project-icon" size="7x" [fixedWidth]="true">
         <fa-icon [icon]="faCircle"></fa-icon>
-        <fa-icon [inverse]="true" [icon]="faJira" transform="shrink-6"></fa-icon>
+        <fa-icon
+          [inverse]="true"
+          [icon]="faJira"
+          transform="shrink-6"
+        ></fa-icon>
       </fa-layers>
     </div>
-    <h2 class="text-center">{{name}}</h2>
-    <p *ngIf="expanded">{{description}}</p>
+    <h2 class="text-center">{{ name }}</h2>
+    <p *ngIf="expanded">{{ description }}</p>
   </div>
 </div>
