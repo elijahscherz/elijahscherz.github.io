@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "Jira Duplicator",
     "description": "This particular project was done during my time at RightBrain Networks. It started out as a <b>Python script</b> meant to copy simple issues between client boards and company boards. It evolved into its own <b>custom module and class</b>, which leveraged <b>jira-python</b> to access the <b>Jira REST API</b> and pull information from passed in issues. Using an argument system, the program could do multiple issues at once, do a query based on <b>Jira's JQL syntax</b>, or even sync two issues to match one another. I ended up supporting copying comments, priorities, assignees, and subtasks, all depending on the availability of the source and target issues.<br><br><b>Challenges</b><br>The most difficult part of building this was dealing with the Jira API which would respond with different amounts of information from issues depending on a variety of variables, including who you were logged in as, what type of project you were getting issues from, etc. The solution to this was using checks to see if a field was available on the issue or subtask, and also seeing if required fields were all available on the source issue.",
     "icon": "faJira",

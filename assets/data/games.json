@@ -1,4 +1,5 @@
-[{
+[
+  {
     "objecttype": "thing",
     "objectid": "173346",
     "subtype": "boardgame",
@@ -34,7 +35,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -102,7 +104,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -170,7 +173,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -238,7 +242,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -314,7 +319,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -390,7 +396,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -458,7 +465,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -526,7 +534,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -594,7 +603,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -662,7 +672,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -730,7 +741,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -806,7 +818,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -882,7 +895,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -950,7 +964,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1018,7 +1033,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1086,7 +1102,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1162,7 +1179,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1230,7 +1248,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1358,7 +1377,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1426,7 +1446,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1555,7 +1576,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1623,7 +1645,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1699,7 +1722,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1775,7 +1799,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1843,7 +1868,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1911,7 +1937,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -1979,7 +2006,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2047,7 +2075,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2123,7 +2152,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2191,7 +2221,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2267,7 +2298,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2335,7 +2367,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2403,7 +2436,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2471,7 +2505,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2539,7 +2574,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2615,7 +2651,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2683,7 +2720,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2751,7 +2789,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2827,7 +2866,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2895,7 +2935,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -2963,7 +3004,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3031,7 +3073,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3099,7 +3142,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3176,7 +3220,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3244,7 +3289,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3312,7 +3358,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3388,7 +3435,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3456,7 +3504,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3524,7 +3573,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3592,7 +3642,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3668,7 +3719,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3736,7 +3788,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3865,7 +3918,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -3896,7 +3950,8 @@
       "lastmodified": "2020-10-10 12:24:55"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "283717",
     "subtype": "boardgameexpansion",
@@ -3956,7 +4011,8 @@
       "lastmodified": "2020-10-10 12:24:22"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "211926",
     "subtype": "boardgameexpansion",
@@ -4016,7 +4072,8 @@
       "lastmodified": "2020-03-09 09:10:43"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "120686",
     "subtype": "boardgameexpansion",
@@ -4076,7 +4133,8 @@
       "lastmodified": "2021-01-13 09:36:23"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "2993",
     "subtype": "boardgameexpansion",
@@ -4112,7 +4170,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4143,7 +4202,8 @@
       "lastmodified": "2020-12-03 09:13:44"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "5405",
     "subtype": "boardgameexpansion",
@@ -4179,7 +4239,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4218,7 +4279,8 @@
       "lastmodified": "2020-11-23 15:32:49"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "118618",
     "subtype": "boardgameexpansion",
@@ -4251,7 +4313,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4290,7 +4353,8 @@
       "lastmodified": "2021-01-13 09:34:58"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "118614",
     "subtype": "boardgameexpansion",
@@ -4323,7 +4387,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4354,7 +4419,8 @@
       "lastmodified": "2020-11-23 15:36:27"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "118615",
     "subtype": "boardgameexpansion",
@@ -4387,7 +4453,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4426,7 +4493,8 @@
       "lastmodified": "2020-11-23 15:35:46"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "118617",
     "subtype": "boardgameexpansion",
@@ -4459,7 +4527,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4498,7 +4567,8 @@
       "lastmodified": "2021-01-13 09:35:31"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "118619",
     "subtype": "boardgameexpansion",
@@ -4531,7 +4601,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4562,7 +4633,8 @@
       "lastmodified": "2020-11-25 16:14:44"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "18836",
     "subtype": "boardgameexpansion",
@@ -4598,7 +4670,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4629,7 +4702,8 @@
       "lastmodified": "2020-11-23 15:34:52"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "118616",
     "subtype": "boardgameexpansion",
@@ -4662,7 +4736,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4701,7 +4776,8 @@
       "lastmodified": "2021-01-13 09:34:31"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "325",
     "subtype": "boardgameexpansion",
@@ -4737,7 +4813,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4776,7 +4853,8 @@
       "lastmodified": "2020-12-25 22:50:00"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "174090",
     "subtype": "boardgameexpansion",
@@ -4812,7 +4890,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -4843,7 +4922,8 @@
       "lastmodified": "2021-01-04 12:38:20"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "289057",
     "subtype": "boardgameexpansion",
@@ -4903,7 +4983,8 @@
       "lastmodified": "2020-11-25 15:43:55"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "259996",
     "subtype": "boardgameexpansion",
@@ -4963,7 +5044,8 @@
       "lastmodified": "2020-09-03 12:54:23"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "289056",
     "subtype": "boardgameexpansion",
@@ -5023,7 +5105,8 @@
       "lastmodified": "2020-11-25 15:45:05"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "312667",
     "subtype": "boardgameexpansion",
@@ -5083,7 +5166,8 @@
       "lastmodified": "2020-12-03 09:14:27"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "204053",
     "subtype": "boardgameexpansion",
@@ -5118,7 +5202,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -5149,7 +5234,8 @@
       "lastmodified": "2020-12-03 09:14:30"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "260214",
     "subtype": "boardgameexpansion",
@@ -5209,7 +5295,8 @@
       "lastmodified": "2020-12-03 09:14:52"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "240909",
     "subtype": "boardgameexpansion",
@@ -5245,7 +5332,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -5276,7 +5364,8 @@
       "lastmodified": "2020-12-03 09:15:12"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "216033",
     "subtype": "boardgameexpansion",
@@ -5311,7 +5400,8 @@
         "median": {
           "value": "0"
         },
-        "ranks": [{
+        "ranks": [
+          {
             "type": "subtype",
             "id": "1",
             "name": "boardgame",
@@ -5350,7 +5440,8 @@
       "lastmodified": "2020-12-03 22:43:12"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "240976",
     "subtype": "boardgameexpansion",
@@ -5410,7 +5501,8 @@
       "lastmodified": "2020-12-03 09:17:41"
     },
     "numplays": "0"
-  }, {
+  },
+  {
     "objecttype": "thing",
     "objectid": "243566",
     "subtype": "boardgameexpansion",
