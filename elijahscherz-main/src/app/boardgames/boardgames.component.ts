@@ -318,14 +318,7 @@ export class BoardgamesComponent implements OnInit {
       });
     }
 
-    const delayedData = new Observable((subscriber) => {
-      setTimeout(() => {
-        subscriber.next(series);
-        subscriber.complete();
-      }, 1000);
-    });
-
-    return delayedData;
+    return of(series);
 
     this.playOptions = {
       title: {
